@@ -34,7 +34,7 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
               <span className="text-xl md:text-2xl font-bold text-teal-600">
-                WillowVibe Digital Solutions
+                WillowVibe
               </span>
             </Link>
           </div>
@@ -45,7 +45,7 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap ${
                   isActive(link.href)
                     ? "text-teal-600 bg-teal-50"
                     : "text-gray-700 hover:text-teal-600 hover:bg-gray-50"
