@@ -68,7 +68,7 @@ export default function Blog() {
                   <span className="bg-teal-100 text-teal-800 px-2 py-1 rounded font-medium">{post.category}</span>
                   <span>{post.date}</span>
                 </div>
-                <Link href={`#`} className="block">
+                <Link href={`/blog/${post.slug}`} className="block">
                   <h2 className="text-2xl font-bold text-gray-900 group-hover:text-teal-600 transition-colors mb-3">
                     {post.title}
                   </h2>
@@ -76,7 +76,7 @@ export default function Blog() {
                 <p className="text-gray-600 mb-4 leading-relaxed">
                   {post.excerpt}
                 </p>
-                <Link href={`#`} className="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center">
+                <Link href={`/blog/${post.slug}`} className="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center">
                   Read more &rarr;
                 </Link>
               </div>

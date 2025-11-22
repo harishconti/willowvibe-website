@@ -158,7 +158,7 @@ export default function Pricing() {
           </div>
 
           {/* What's Included */}
-          <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
+          <div className="bg-gray-50 rounded-2xl p-8 md:p-12 mb-20">
              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Included in All Projects</h3>
              <div className="grid md:grid-cols-3 gap-6">
                 {[
@@ -173,6 +173,94 @@ export default function Pricing() {
                     </div>
                 ))}
              </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+              {/* Add-On Services */}
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Add-On Services</h3>
+                  <div className="space-y-6">
+                      <div className="flex justify-between items-center border-b border-gray-100 pb-4">
+                          <div>
+                              <h4 className="font-bold text-gray-900">Ongoing Maintenance</h4>
+                              <p className="text-sm text-gray-500">Updates, security patches, monitoring</p>
+                          </div>
+                          <div className="text-right">
+                              <p className="font-bold text-teal-600">₹20k - 50k</p>
+                              <p className="text-xs text-gray-400">/month</p>
+                          </div>
+                      </div>
+                      <div className="flex justify-between items-center border-b border-gray-100 pb-4">
+                          <div>
+                              <h4 className="font-bold text-gray-900">Priority Support</h4>
+                              <p className="text-sm text-gray-500">Faster response times, dedicated channel</p>
+                          </div>
+                          <div className="text-right">
+                              <p className="font-bold text-teal-600">₹15k</p>
+                              <p className="text-xs text-gray-400">/month</p>
+                          </div>
+                      </div>
+                      <div className="flex justify-between items-center border-b border-gray-100 pb-4">
+                          <div>
+                              <h4 className="font-bold text-gray-900">Server Hosting Management</h4>
+                              <p className="text-sm text-gray-500">Infrastructure management</p>
+                          </div>
+                          <div className="text-right">
+                              <p className="font-bold text-teal-600">₹10k - 30k</p>
+                              <p className="text-xs text-gray-400">/month</p>
+                          </div>
+                      </div>
+                       <div className="flex justify-between items-center">
+                          <div>
+                              <h4 className="font-bold text-gray-900">Additional Training</h4>
+                              <p className="text-sm text-gray-500">On-site or virtual team training</p>
+                          </div>
+                          <div className="text-right">
+                              <p className="font-bold text-teal-600">₹25k</p>
+                              <p className="text-xs text-gray-400">/day</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              {/* Payment Terms */}
+              <div className="bg-teal-50 rounded-2xl border border-teal-100 p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Payment Terms</h3>
+                  <p className="text-gray-600 mb-8">
+                      We believe in fair and transparent payment schedules linked to clear deliverables.
+                  </p>
+
+                  <div className="space-y-6 relative">
+                      {/* Connecting Line */}
+                      <div className="absolute left-[15px] top-3 bottom-3 w-0.5 bg-teal-200"></div>
+
+                      <div className="relative flex items-start">
+                          <div className="h-8 w-8 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold text-sm shrink-0 z-10">1</div>
+                          <div className="ml-6">
+                              <h4 className="font-bold text-gray-900">30% Upfront</h4>
+                              <p className="text-sm text-gray-600">To kick off the project and reserve resources.</p>
+                          </div>
+                      </div>
+                      <div className="relative flex items-start">
+                          <div className="h-8 w-8 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold text-sm shrink-0 z-10">2</div>
+                          <div className="ml-6">
+                              <h4 className="font-bold text-gray-900">40% Mid-Project</h4>
+                              <p className="text-sm text-gray-600">Upon completion of major milestones or alpha release.</p>
+                          </div>
+                      </div>
+                      <div className="relative flex items-start">
+                          <div className="h-8 w-8 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold text-sm shrink-0 z-10">3</div>
+                          <div className="ml-6">
+                              <h4 className="font-bold text-gray-900">30% On Delivery</h4>
+                              <p className="text-sm text-gray-600">After final testing, approval, and deployment.</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div className="mt-8 pt-6 border-t border-teal-200 text-sm text-teal-800 font-medium">
+                      For Monthly Retainers: Invoiced at the beginning of each month.
+                  </div>
+              </div>
           </div>
         </div>
       </section>
