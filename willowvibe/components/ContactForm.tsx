@@ -18,8 +18,8 @@ export default function ContactForm() {
     const data = Object.fromEntries(formData.entries());
 
     // Basic Validation
-    if (!data.email || !data.message || !data.name) {
-        setError("Please fill in all required fields.");
+    if (!data.email || !data.message || !data.name || !data.phone) {
+        setError("Please fill in all required fields (Name, Email, Phone, Message).");
         setIsLoading(false);
         return;
     }
@@ -40,6 +40,11 @@ export default function ContactForm() {
             }),
         });
 
+        // Check for network error first
+        if (!response.ok) {
+             throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
         const result = await response.json();
 
         if (result.success) {
@@ -50,14 +55,15 @@ export default function ContactForm() {
             setError(result.message || "Something went wrong. Please try again.");
         }
     } catch (err) {
-        setError("Failed to send message. Please try again later.");
+        console.error("Submission error:", err);
+        setError("Failed to send message. Please check your internet connection or try again later.");
     } finally {
         setIsLoading(false);
     }
   }
 
   return (
-            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+            <div className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-100">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
 
               {isSuccess ? (
@@ -78,7 +84,7 @@ export default function ContactForm() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                     {error && (
                         <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded relative flex items-center">
-                            <AlertCircle className="h-5 w-5 mr-2" />
+                            <AlertCircle className="h-5 w-5 mr-2 flex-shrink-0" />
                             <span className="block sm:inline">{error}</span>
                         </div>
                     )}
@@ -116,7 +122,7 @@ export default function ContactForm() {
                         <div>
                             <label htmlFor="service" className="block text-sm font-medium text-gray-700">Service Interested In</label>
                             <div className="mt-1">
-                                <select id="service" name="service" className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md border">
+                                <select id="service" name="service" className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md border bg-white">
                                 <option>AI Integration / LLM Solutions</option>
                                 <option>AI Proof of Concept</option>
                                 <option>RAG System Development</option>
@@ -133,7 +139,7 @@ export default function ContactForm() {
                          <div>
                             <label htmlFor="timeline" className="block text-sm font-medium text-gray-700">Project Timeline</label>
                             <div className="mt-1">
-                                <select id="timeline" name="timeline" className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md border">
+                                <select id="timeline" name="timeline" className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md border bg-white">
                                 <option>Immediate (Start ASAP)</option>
                                 <option>1-3 Months</option>
                                 <option>3-6 Months</option>
@@ -146,7 +152,7 @@ export default function ContactForm() {
                     <div>
                     <label htmlFor="budget" className="block text-sm font-medium text-gray-700">Budget Range</label>
                     <div className="mt-1">
-                        <select id="budget" name="budget" className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md border">
+                        <select id="budget" name="budget" className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md border bg-white">
                         <option>Under ₹3,00,000</option>
                         <option>₹3,00,000 - ₹10,00,000</option>
                         <option>₹10,00,000 - ₹25,00,000</option>

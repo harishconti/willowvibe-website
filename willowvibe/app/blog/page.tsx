@@ -1,5 +1,6 @@
-import Link from "next/link";
 import { Metadata } from "next";
+import { getSortedPostsData } from "@/lib/blog";
+import BlogList from "@/components/BlogList";
 
 export const metadata: Metadata = {
   title: "Tech Blog | Insights on AI, SaaS & Cloud Engineering | WillowVibe",
@@ -10,55 +11,12 @@ export const metadata: Metadata = {
 };
 
 export default function Blog() {
-  const posts = [
-    {
-      slug: "chatgpt-api-integration",
-      title: "Getting Started with ChatGPT API Integration: Complete Guide",
-      category: "AI & LLM",
-      date: "May 15, 2024",
-      excerpt: "A step-by-step tutorial on integrating OpenAI's GPT-4 API into your existing Python application for intelligent text generation."
-    },
-    {
-      slug: "rag-vs-finetuning",
-      title: "RAG vs Fine-tuning: Which is Right for Your Business?",
-      category: "AI Strategy",
-      date: "Apr 28, 2024",
-      excerpt: "Understanding the trade-offs between Retrieval-Augmented Generation and model fine-tuning for custom knowledge bases."
-    },
-    {
-      slug: "fastapi-guide",
-      title: "Building a FastAPI backend in 2024: Complete Guide",
-      category: "Technical",
-      date: "Oct 15, 2023",
-      excerpt: "Learn how to set up a high-performance API with Python's modern framework, including Pydantic validation and async capabilities."
-    },
-    {
-      slug: "react-native-vs-native",
-      title: "React Native vs Native Development: Cost Analysis",
-      category: "Business",
-      date: "Oct 01, 2023",
-      excerpt: "A detailed breakdown of development costs, maintenance, and performance trade-offs for startups and enterprises."
-    },
-    {
-      slug: "kubernetes-small-business",
-      title: "Kubernetes for Small Businesses: Is It Worth It?",
-      category: "DevOps",
-      date: "Sep 20, 2023",
-      excerpt: "When should you switch from PaaS to Kubernetes? We explore the tipping points for complexity vs. scalability."
-    },
-    {
-      slug: "offline-first-apps",
-      title: "Building Offline-First Mobile Apps with WatermelonDB",
-      category: "Mobile",
-      date: "Sep 05, 2023",
-      excerpt: "Ensuring a seamless user experience in poor network conditions using local-first architecture."
-    }
-  ];
+  const posts = getSortedPostsData();
 
   return (
-    <div className="bg-white">
+    <div className="bg-white min-h-screen">
       {/* Header */}
-      <div className="bg-teal-900 py-20">
+      <div className="bg-teal-900 py-20 mb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Insights & Resources</h1>
           <p className="text-xl text-teal-100 max-w-2xl mx-auto">
@@ -67,36 +25,9 @@ export default function Blog() {
         </div>
       </div>
 
-      {/* Blog List */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12">
-            {posts.map((post, index) => (
-              <div key={index} className="group">
-                <div className="flex items-center space-x-4 text-sm text-gray-500 mb-2">
-                  <span className="bg-teal-100 text-teal-800 px-2 py-1 rounded font-medium">{post.category}</span>
-                  <span>{post.date}</span>
-                </div>
-                <Link href={`/blog/${post.slug}`} className="block">
-                  <h2 className="text-2xl font-bold text-gray-900 group-hover:text-teal-600 transition-colors mb-3">
-                    {post.title}
-                  </h2>
-                </Link>
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {post.excerpt}
-                </p>
-                <Link href={`/blog/${post.slug}`} className="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center">
-                  Read more &rarr;
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          {/* Pagination Placeholder */}
-          <div className="mt-16 pt-8 border-t border-gray-100 flex justify-center">
-             <span className="text-gray-400 italic">More posts coming soon...</span>
-          </div>
-        </div>
+      {/* Blog List Component */}
+      <section className="pb-20">
+        <BlogList initialPosts={posts} />
       </section>
     </div>
   );
