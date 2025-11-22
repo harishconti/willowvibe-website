@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowRight, CheckCircle, Server, Database, Cloud, Code, Smartphone, Layout, Brain, Zap } from "lucide-react";
 import { Metadata } from "next";
 import TrustedBy from "@/components/TrustedBy";
+import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
   title: "WillowVibe Digital Solutions | Custom SaaS Development & AI Integration",
@@ -187,6 +188,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* Case Study Highlight */}
       <section className="py-20 bg-teal-900 text-white">

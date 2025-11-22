@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Award, Users, Lightbulb, User } from "lucide-react";
 import { Metadata } from "next";
+import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
   title: "About Us | WillowVibe Digital Solutions",
@@ -127,6 +128,9 @@ export default function About() {
           </div>
         </div>
       </section>
+
+       {/* Testimonials */}
+       <Testimonials />
 
        {/* Company Details */}
       <section className="py-12 bg-gray-50 border-t border-gray-200">
