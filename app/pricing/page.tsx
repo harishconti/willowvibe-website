@@ -1,6 +1,7 @@
 import { Check, HelpCircle } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
+import FAQ from "@/components/FAQ";
 
 export const metadata: Metadata = {
   title: "Pricing & Packages | WillowVibe Digital Solutions",
@@ -273,6 +274,9 @@ export default function Pricing() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ />
     </div>
   );
 }
