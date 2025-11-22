@@ -86,7 +86,7 @@ const TrustedBy = () => {
         </div>
 
         {/* Statistics Bar */}
-        <div className="bg-teal-50 rounded-2xl p-8">
+        <div className="rounded-2xl p-8" style={{ backgroundColor: 'var(--color-bg-1)' }}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x divide-teal-100/50">
             {stats.map((stat, index) => (
               <div key={index} className="flex flex-col items-center justify-center space-y-1">
