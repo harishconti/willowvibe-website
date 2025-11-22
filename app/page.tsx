@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, CheckCircle, Server, Database, Cloud, Code, Smartphone, Layout, Brain, Zap } from "lucide-react";
 import { Metadata } from "next";
+import TrustedBy from "@/components/TrustedBy";
 
 export const metadata: Metadata = {
   title: "WillowVibe Digital Solutions | Custom SaaS Development & AI Integration",
@@ -58,29 +59,7 @@ export default function Home() {
       </section>
 
       {/* Trust Indicators */}
-      <section className="bg-white py-12 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Placeholder for Logos/Badges */}
-            <div className="flex flex-col items-center justify-center space-y-2">
-              <span className="text-3xl font-bold text-gray-800">5+</span>
-              <span className="text-sm font-medium text-gray-500">Years Experience</span>
-            </div>
-             <div className="flex flex-col items-center justify-center space-y-2">
-              <span className="text-3xl font-bold text-gray-800">100%</span>
-              <span className="text-sm font-medium text-gray-500">Cloud Native</span>
-            </div>
-             <div className="flex flex-col items-center justify-center space-y-2">
-              <span className="text-3xl font-bold text-gray-800">AI/LLM</span>
-              <span className="text-sm font-medium text-gray-500">Integration Specialist</span>
-            </div>
-             <div className="flex flex-col items-center justify-center space-y-2">
-              <span className="text-3xl font-bold text-gray-800">Fast</span>
-              <span className="text-sm font-medium text-gray-500">Delivery</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <TrustedBy />
 
       {/* Services Overview */}
       <section className="py-20 bg-gray-50">
