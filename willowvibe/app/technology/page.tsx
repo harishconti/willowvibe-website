@@ -1,4 +1,13 @@
 import { Server, Smartphone, Database, Cloud, Code, Brain } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Technology Stack | Python, React, AI & Cloud | WillowVibe",
+  description: "Explore the modern technology stack we use at WillowVibe, including Python, FastAPI, React Native, Kubernetes, and cutting-edge AI frameworks like LangChain.",
+  alternates: {
+    canonical: "https://willowvibe.github.io/willowvibe-website/technology",
+  },
+};
 
 export default function Technology() {
   const techCategories = [

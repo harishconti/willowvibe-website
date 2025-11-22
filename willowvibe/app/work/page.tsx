@@ -1,5 +1,14 @@
 import { ArrowRight, Check, Server, Smartphone, Database } from "lucide-react";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Case Studies & Portfolio | WillowVibe",
+  description: "See how we solve real-world problems. Featured case study: Clinic OS Lite, an offline-first patient management system built with React Native and FastAPI.",
+  alternates: {
+    canonical: "https://willowvibe.github.io/willowvibe-website/work",
+  },
+};
 
 export default function Work() {
   return (

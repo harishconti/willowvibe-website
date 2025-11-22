@@ -1,5 +1,14 @@
 import Image from "next/image";
 import { Award, Users, Lightbulb, User } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us | WillowVibe Digital Solutions",
+  description: "Learn about WillowVibe's mission to democratize enterprise-grade software development and AI integration services for businesses in Bengaluru and beyond.",
+  alternates: {
+    canonical: "https://willowvibe.github.io/willowvibe-website/about",
+  },
+};
 
 export default function About() {
   return (
@@ -30,9 +39,13 @@ export default function About() {
                 In 2024, we expanded our capabilities to include <strong>AI and LLM integration</strong>, recognizing the transformative potential of generative AI for businesses. We now combine traditional software development with cutting-edge AI to deliver intelligent, automated solutions.
               </p>
             </div>
-            <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center">
-              {/* Placeholder for Office Image/Illustration */}
-              <span className="text-gray-400 font-medium">Office / Team Illustration</span>
+            <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center relative overflow-hidden">
+              <Image
+                src="/images/hero-illustration.svg"
+                alt="Office Team Illustration"
+                fill
+                className="object-cover opacity-50"
+              />
             </div>
           </div>
         </div>
@@ -83,9 +96,13 @@ export default function About() {
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Meet the Lead</h2>
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
             <div className="md:flex">
-              <div className="md:flex-shrink-0 bg-gray-200 md:w-64 flex items-center justify-center">
-                 {/* Placeholder for Founder Photo */}
-                 <User className="h-32 w-32 text-gray-400" />
+              <div className="md:flex-shrink-0 bg-gray-200 md:w-64 flex items-center justify-center relative">
+                 <Image
+                   src="/images/team-photo.svg"
+                   alt="Harish Conti"
+                   fill
+                   className="object-cover"
+                 />
               </div>
               <div className="p-8">
                 <div className="uppercase tracking-wide text-sm text-teal-600 font-semibold">Founder & Lead Engineer</div>

@@ -1,33 +1,56 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle, Server, Database, Cloud, Code, Smartphone, Layout, Brain, Zap } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "WillowVibe Digital Solutions | Custom SaaS Development & AI Integration",
+  description: "Professional IT services company in Bengaluru specializing in custom SaaS development, AI/LLM integration, data engineering, and cloud infrastructure.",
+  alternates: {
+    canonical: "https://willowvibe.github.io/willowvibe-website/",
+  },
+};
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-50 to-teal-50 py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
-              Transforming Ideas Into <span className="text-teal-600">Scalable Digital Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-              Full-stack development, <strong>AI integration</strong>, data engineering, and cloud infrastructure for modern businesses. We build enterprise-grade software that grows with you.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal-600 rounded-lg hover:bg-teal-700 transition-all shadow-lg hover:shadow-xl"
-              >
-                Schedule a Free Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                href="/work"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal-700 bg-white border border-teal-200 rounded-lg hover:bg-teal-50 transition-all shadow-sm"
-              >
-                View Our Work
-              </Link>
+      <section className="bg-gradient-to-br from-slate-50 to-teal-50 py-20 lg:py-32 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center">
+            <div className="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
+              <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
+                Transforming Ideas Into <span className="text-teal-600">Scalable Digital Solutions</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+                Full-stack development, <strong>AI integration</strong>, data engineering, and cloud infrastructure for modern businesses. We build enterprise-grade software that grows with you.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal-600 rounded-lg hover:bg-teal-700 transition-all shadow-lg hover:shadow-xl"
+                >
+                  Schedule a Free Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/work"
+                  className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal-700 bg-white border border-teal-200 rounded-lg hover:bg-teal-50 transition-all shadow-sm"
+                >
+                  View Our Work
+                </Link>
+              </div>
+            </div>
+            <div className="lg:w-1/2 flex justify-center lg:justify-end">
+               <div className="relative w-full max-w-lg h-[300px] md:h-[400px]">
+                 <Image
+                    src="/images/hero-illustration.svg"
+                    alt="WillowVibe Digital Solutions Hero"
+                    fill
+                    className="object-contain"
+                    priority
+                 />
+               </div>
             </div>
           </div>
         </div>
@@ -170,11 +193,15 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="bg-gray-100 rounded-2xl p-8 h-96 flex items-center justify-center">
-              {/* Placeholder for Illustration/Image */}
-              <div className="text-center">
-                <Code className="h-24 w-24 text-gray-300 mx-auto mb-4" />
-                <p className="text-gray-400 font-medium">Tech Stack Illustration</p>
+            <div className="bg-gray-100 rounded-2xl p-8 h-96 flex items-center justify-center relative overflow-hidden">
+              <div className="absolute inset-0 flex items-center justify-center">
+                 <Image
+                    src="/images/tech-stack-logos.svg"
+                    alt="WillowVibe Tech Stack"
+                    width={400}
+                    height={300}
+                    className="object-contain opacity-80 hover:opacity-100 transition-opacity"
+                 />
               </div>
             </div>
           </div>
@@ -206,8 +233,13 @@ export default function Home() {
                 View Case Study <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
-            <div className="order-1 md:order-2 bg-teal-800 rounded-xl h-80 flex items-center justify-center opacity-80">
-              <Smartphone className="h-24 w-24 text-teal-400" />
+            <div className="order-1 md:order-2 bg-teal-800 rounded-xl h-80 flex items-center justify-center relative overflow-hidden">
+              <Image
+                src="/images/clinic-os-lite.svg"
+                alt="Clinic OS Lite Screenshot"
+                fill
+                className="object-contain p-4"
+              />
             </div>
           </div>
         </div>

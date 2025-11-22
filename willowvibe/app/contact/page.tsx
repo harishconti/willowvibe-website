@@ -1,4 +1,14 @@
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
+import { Metadata } from "next";
+import ContactForm from "@/components/ContactForm";
+
+export const metadata: Metadata = {
+  title: "Contact Us | WillowVibe Digital Solutions",
+  description: "Get in touch with WillowVibe for your custom SaaS development, AI integration, or data engineering needs. Schedule a consultation today.",
+  alternates: {
+    canonical: "https://willowvibe.github.io/willowvibe-website/contact",
+  },
+};
 
 export default function Contact() {
   return (
@@ -81,82 +91,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">First name</label>
-                    <div className="mt-1">
-                      <input type="text" name="first-name" id="first-name" autoComplete="given-name" className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md" />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">Last name</label>
-                    <div className="mt-1">
-                      <input type="text" name="last-name" id="last-name" autoComplete="family-name" className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md" />
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-                  <div className="mt-1">
-                    <input id="email" name="email" type="email" autoComplete="email" className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md" />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700">Service Interested In</label>
-                  <div className="mt-1">
-                    <select id="service" name="service" className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md">
-                      <option>AI Integration / LLM Solutions</option>
-                      <option>AI Proof of Concept</option>
-                      <option>RAG System Development</option>
-                      <option>AI Consultation</option>
-                      <option>Custom SaaS Development</option>
-                      <option>Backend & API Development</option>
-                      <option>Data Engineering</option>
-                      <option>Cloud & DevOps</option>
-                      <option>Healthcare Solutions</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="budget" className="block text-sm font-medium text-gray-700">Budget Range</label>
-                  <div className="mt-1">
-                    <select id="budget" name="budget" className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md">
-                      <option>Under ₹3,00,000</option>
-                      <option>₹3,00,000 - ₹10,00,000</option>
-                      <option>₹10,00,000+</option>
-                      <option>Not sure yet</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-                  <div className="mt-1">
-                    <textarea id="message" name="message" rows={4} className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"></textarea>
-                  </div>
-                </div>
-
-                <div>
-                  <button type="submit" className="w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors">
-                    Send Message
-                  </button>
-                </div>
-
-                <div className="mt-6 pt-6 border-t border-gray-200 text-center">
-                    <p className="text-gray-600 text-sm mb-4">Looking for a quick chat about AI?</p>
-                    <a href="#" className="inline-flex items-center justify-center px-6 py-2 border border-teal-600 text-base font-medium rounded-md text-teal-600 bg-white hover:bg-teal-50 transition-colors w-full">
-                        Schedule Free AI Consultation
-                    </a>
-                </div>
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>
