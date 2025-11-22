@@ -47,6 +47,7 @@ export default function Home() {
                     src="/images/hero-illustration.svg"
                     alt="WillowVibe Digital Solutions Hero"
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-contain"
                     priority
                  />
@@ -238,6 +239,7 @@ export default function Home() {
                 src="/images/clinic-os-lite.svg"
                 alt="Clinic OS Lite Screenshot"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-contain p-4"
               />
             </div>
