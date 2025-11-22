@@ -3,6 +3,20 @@ import Link from "next/link";
 export default function Blog() {
   const posts = [
     {
+      slug: "chatgpt-api-integration",
+      title: "Getting Started with ChatGPT API Integration: Complete Guide",
+      category: "AI & LLM",
+      date: "May 15, 2024",
+      excerpt: "A step-by-step tutorial on integrating OpenAI's GPT-4 API into your existing Python application for intelligent text generation."
+    },
+    {
+      slug: "rag-vs-finetuning",
+      title: "RAG vs Fine-tuning: Which is Right for Your Business?",
+      category: "AI Strategy",
+      date: "Apr 28, 2024",
+      excerpt: "Understanding the trade-offs between Retrieval-Augmented Generation and model fine-tuning for custom knowledge bases."
+    },
+    {
       slug: "fastapi-guide",
       title: "Building a FastAPI backend in 2024: Complete Guide",
       category: "Technical",

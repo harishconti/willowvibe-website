@@ -110,6 +110,10 @@ export default function Contact() {
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700">Service Interested In</label>
                   <div className="mt-1">
                     <select id="service" name="service" className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md">
+                      <option>AI Integration / LLM Solutions</option>
+                      <option>AI Proof of Concept</option>
+                      <option>RAG System Development</option>
+                      <option>AI Consultation</option>
                       <option>Custom SaaS Development</option>
                       <option>Backend & API Development</option>
                       <option>Data Engineering</option>
@@ -143,6 +147,13 @@ export default function Contact() {
                   <button type="submit" className="w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors">
                     Send Message
                   </button>
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-gray-200 text-center">
+                    <p className="text-gray-600 text-sm mb-4">Looking for a quick chat about AI?</p>
+                    <a href="#" className="inline-flex items-center justify-center px-6 py-2 border border-teal-600 text-base font-medium rounded-md text-teal-600 bg-white hover:bg-teal-50 transition-colors w-full">
+                        Schedule Free AI Consultation
+                    </a>
                 </div>
               </form>
             </div>

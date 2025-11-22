@@ -61,6 +61,11 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
             <ul className="space-y-2">
               <li>
+                <Link href="/ai-solutions" className="text-teal-300 hover:text-teal-400 transition-colors font-medium">
+                  AI Solutions & LLM Integration
+                </Link>
+              </li>
+              <li>
                 <Link href="/services" className="text-gray-400 hover:text-teal-400 transition-colors">
                   Custom SaaS Development
                 </Link>
@@ -78,6 +83,20 @@ export default function Footer() {
               <li>
                 <Link href="/services" className="text-gray-400 hover:text-teal-400 transition-colors">
                   Cloud & DevOps
+                </Link>
+              </li>
+            </ul>
+
+             <h3 className="text-lg font-semibold mb-4 text-white mt-8">AI Resources</h3>
+            <ul className="space-y-2">
+               <li>
+                <Link href="/blog" className="text-gray-400 hover:text-teal-400 transition-colors">
+                  AI Case Studies
+                </Link>
+              </li>
+               <li>
+                <Link href="/blog" className="text-gray-400 hover:text-teal-400 transition-colors">
+                  AI Use Case Guide
                 </Link>
               </li>
             </ul>

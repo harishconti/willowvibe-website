@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle, Server, Database, Cloud, Code, Smartphone, Layout } from "lucide-react";
+import { ArrowRight, CheckCircle, Server, Database, Cloud, Code, Smartphone, Layout, Brain, Zap } from "lucide-react";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
               Transforming Ideas Into <span className="text-teal-600">Scalable Digital Solutions</span>
             </h1>
             <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-              Full-stack development, data engineering, and cloud infrastructure for modern businesses. We build enterprise-grade software that grows with you.
+              Full-stack development, <strong>AI integration</strong>, data engineering, and cloud infrastructure for modern businesses. We build enterprise-grade software that grows with you.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
@@ -47,8 +47,8 @@ export default function Home() {
               <span className="text-sm font-medium text-gray-500">Cloud Native</span>
             </div>
              <div className="flex flex-col items-center justify-center space-y-2">
-              <span className="text-3xl font-bold text-gray-800">24/7</span>
-              <span className="text-sm font-medium text-gray-500">System Uptime</span>
+              <span className="text-3xl font-bold text-gray-800">AI/LLM</span>
+              <span className="text-sm font-medium text-gray-500">Integration Specialist</span>
             </div>
              <div className="flex flex-col items-center justify-center space-y-2">
               <span className="text-3xl font-bold text-gray-800">Fast</span>
@@ -68,7 +68,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             {/* Service 1 */}
             <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
               <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-6">
@@ -83,7 +83,21 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Service 2 */}
+            {/* Service 2 (AI - NEW) */}
+             <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+              <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-6">
+                <Brain className="h-7 w-7 text-teal-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI & Intelligent Automation</h3>
+              <p className="text-gray-600 mb-6">
+                Leverage LLMs and AI to automate workflows, enhance decision-making, and build intelligent chatbots.
+              </p>
+              <Link href="/ai-solutions" className="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center">
+                Learn more <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </div>
+
+            {/* Service 3 */}
             <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
               <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
                 <Database className="h-7 w-7 text-blue-600" />
@@ -97,7 +111,7 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Service 3 */}
+            {/* Service 4 */}
             <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
               <div className="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
                 <Cloud className="h-7 w-7 text-indigo-600" />
@@ -185,6 +199,9 @@ export default function Home() {
                 <span className="px-3 py-1 bg-teal-800 rounded text-sm">MongoDB</span>
                 <span className="px-3 py-1 bg-teal-800 rounded text-sm">WatermelonDB</span>
               </div>
+              <p className="text-teal-200 text-sm mb-8">
+                  <strong>Coming Soon:</strong> AI-Powered Medical Scribe for Clinic OS Lite - reducing documentation time by 60%
+              </p>
               <Link href="/work" className="inline-flex items-center text-white font-semibold hover:text-teal-200">
                 View Case Study <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

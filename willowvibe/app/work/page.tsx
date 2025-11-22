@@ -89,8 +89,37 @@ export default function Work() {
                         Deployment successful in 3 clinics, reducing patient check-in time by 40% and eliminating data loss due to connectivity issues.
                     </p>
                 </div>
+
+                <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                    <h4 className="font-bold text-blue-900 mb-2">Planned AI Enhancements (Q2 2025)</h4>
+                    <ul className="space-y-2 text-sm text-blue-800">
+                        <li>• <strong>AI Medical Scribe:</strong> Real-time clinical note generation using OpenAI Whisper & GPT-4</li>
+                        <li>• <strong>Intelligent Search:</strong> Semantic patient history search</li>
+                        <li>• <strong>Drug Interaction Warnings:</strong> AI-powered safety checks</li>
+                    </ul>
+                </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Other Projects / AI Samples */}
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">More Projects & Experiments</h2>
+           <div className="grid md:grid-cols-3 gap-8">
+               {/* Project 1 */}
+               <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                   <div className="h-40 bg-gray-100 rounded-lg mb-6 flex items-center justify-center">
+                       <span className="text-gray-400 font-medium">RAG Chatbot Demo</span>
+                   </div>
+                   <h3 className="text-xl font-bold text-gray-900 mb-2">Technical Support AI Bot</h3>
+                   <p className="text-gray-600 text-sm mb-4">
+                       A demonstration of Retrieval-Augmented Generation (RAG) using Pinecone and OpenAI to answer technical queries from documentation.
+                   </p>
+                   <span className="text-xs font-semibold bg-teal-100 text-teal-800 px-2 py-1 rounded">Internal Tool</span>
+               </div>
+           </div>
         </div>
       </section>
 
