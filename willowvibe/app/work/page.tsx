@@ -71,15 +71,84 @@ export default function Work() {
 
             <div className="space-y-8">
                 {/* Screenshots / Visuals */}
-                <div className="bg-gray-100 rounded-2xl h-64 flex items-center justify-center shadow-inner">
-                    <span className="text-gray-400 font-medium">Dashboard Screenshot</span>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-gray-100 rounded-2xl h-48 flex items-center justify-center shadow-inner">
-                        <span className="text-gray-400 font-medium text-sm">Mobile View</span>
+                <div className="bg-gray-50 rounded-2xl border border-gray-200 p-4 shadow-sm">
+                    <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100">
+                        {/* Fake Browser Header */}
+                        <div className="bg-gray-100 px-4 py-2 border-b border-gray-200 flex items-center space-x-2">
+                            <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                            <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                            <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                            <div className="ml-4 bg-white rounded text-xs text-gray-400 px-2 py-0.5 flex-1 text-center">clinic-os.app/dashboard</div>
+                        </div>
+                        {/* Fake Dashboard Content */}
+                        <div className="p-4 space-y-4">
+                            <div className="flex justify-between items-center">
+                                <div className="h-6 w-32 bg-gray-200 rounded animate-pulse"></div>
+                                <div className="h-8 w-8 bg-gray-200 rounded-full"></div>
+                            </div>
+                            <div className="grid grid-cols-3 gap-4">
+                                <div className="h-24 bg-blue-50 rounded p-3">
+                                    <div className="h-4 w-12 bg-blue-200 rounded mb-2"></div>
+                                    <div className="h-8 w-16 bg-blue-100 rounded"></div>
+                                </div>
+                                <div className="h-24 bg-teal-50 rounded p-3">
+                                    <div className="h-4 w-12 bg-teal-200 rounded mb-2"></div>
+                                    <div className="h-8 w-16 bg-teal-100 rounded"></div>
+                                </div>
+                                <div className="h-24 bg-purple-50 rounded p-3">
+                                    <div className="h-4 w-12 bg-purple-200 rounded mb-2"></div>
+                                    <div className="h-8 w-16 bg-purple-100 rounded"></div>
+                                </div>
+                            </div>
+                             <div className="h-40 bg-gray-50 rounded border border-gray-100 p-3">
+                                 <div className="flex space-x-4 mb-3 border-b border-gray-200 pb-2">
+                                     <div className="h-4 w-16 bg-gray-200 rounded"></div>
+                                     <div className="h-4 w-16 bg-gray-200 rounded"></div>
+                                 </div>
+                                 <div className="space-y-2">
+                                     <div className="h-8 w-full bg-white rounded border border-gray-100"></div>
+                                     <div className="h-8 w-full bg-white rounded border border-gray-100"></div>
+                                     <div className="h-8 w-full bg-white rounded border border-gray-100"></div>
+                                 </div>
+                             </div>
+                        </div>
                     </div>
-                    <div className="bg-gray-100 rounded-2xl h-48 flex items-center justify-center shadow-inner">
-                        <span className="text-gray-400 font-medium text-sm">Offline Sync Demo</span>
+                    <p className="text-center text-xs text-gray-500 mt-2">Dashboard View</p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-gray-50 rounded-2xl border border-gray-200 p-4 shadow-sm flex flex-col items-center">
+                         <div className="w-24 bg-white border border-gray-300 rounded-[1.5rem] p-1 shadow-sm">
+                             <div className="bg-gray-50 rounded-[1.2rem] h-40 overflow-hidden relative">
+                                 {/* Mobile Screen Mockup */}
+                                 <div className="bg-teal-600 h-8 w-full"></div>
+                                 <div className="p-2 space-y-2">
+                                     <div className="h-8 bg-white rounded shadow-sm"></div>
+                                     <div className="h-8 bg-white rounded shadow-sm"></div>
+                                     <div className="h-8 bg-white rounded shadow-sm"></div>
+                                 </div>
+                                  <div className="absolute bottom-1 right-1 w-6 h-6 bg-teal-500 rounded-full flex items-center justify-center text-[8px] text-white">+</div>
+                             </div>
+                         </div>
+                         <p className="text-xs text-gray-500 mt-2">Mobile Interface</p>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-2xl border border-gray-200 p-4 shadow-sm flex flex-col items-center justify-center">
+                         <div className="relative">
+                             <div className="bg-white p-3 rounded-lg border border-gray-200 shadow-sm w-32">
+                                 <div className="flex items-center space-x-2 mb-2">
+                                     <div className="h-2 w-2 rounded-full bg-green-500"></div>
+                                     <div className="text-[10px] text-gray-500">Synced</div>
+                                 </div>
+                                 <div className="h-1 bg-gray-100 rounded-full overflow-hidden">
+                                     <div className="h-full bg-green-500 w-full"></div>
+                                 </div>
+                             </div>
+                             <div className="absolute -top-2 -right-2 bg-yellow-100 text-yellow-800 text-[10px] px-1.5 py-0.5 rounded border border-yellow-200">
+                                 Offline Mode
+                             </div>
+                         </div>
+                         <p className="text-xs text-gray-500 mt-4 text-center">Offline Sync</p>
                     </div>
                 </div>
 
