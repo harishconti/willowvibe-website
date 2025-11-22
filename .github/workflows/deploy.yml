@@ -28,6 +28,7 @@ jobs:
       - name: Build
         run: |
           npm run build
+          cp .nojekyll ./out/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
