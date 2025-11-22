@@ -13,6 +13,7 @@ export interface BlogPost {
   tags: string[];
   content: string;
   category?: string; // Keeping category for compatibility if needed, though tags cover it
+  readTime?: string;
 }
 
 export function getSortedPostsData(): BlogPost[] {
@@ -42,6 +43,7 @@ export function getSortedPostsData(): BlogPost[] {
       excerpt: matterResult.data.excerpt,
       tags: matterResult.data.tags || [],
       category: matterResult.data.tags?.[0] || 'Uncategorized', // Fallback category from first tag
+      readTime: matterResult.data.readTime,
       content: matterResult.content,
       ...matterResult.data,
     } as BlogPost;
@@ -77,6 +79,7 @@ export function getPostData(slug: string): BlogPost | null {
     excerpt: matterResult.data.excerpt,
     tags: matterResult.data.tags || [],
     category: matterResult.data.tags?.[0] || 'Uncategorized',
+    readTime: matterResult.data.readTime,
     content: matterResult.content,
     ...matterResult.data,
   } as BlogPost;

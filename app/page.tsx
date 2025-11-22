@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle, Server, Database, Cloud, Code, Smartphone, Lay
 import { Metadata } from "next";
 import TrustedBy from "@/components/TrustedBy";
 import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
 
 export const metadata: Metadata = {
   title: "WillowVibe Digital Solutions | Custom SaaS Development & AI Integration",
@@ -259,6 +260,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ />
 
       {/* CTA Section */}
       <section className="py-24 bg-gray-50">
