@@ -58,7 +58,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust Indicators */}
+      {/* Social Proof Section */}
       <TrustedBy />
 
       {/* Services Overview */}
