@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Open_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const inter = Inter({
@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${openSans.variable} font-sans antialiased flex flex-col min-h-screen`}
       >
-        <Navbar />
+        <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
       </body>

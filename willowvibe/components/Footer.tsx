@@ -5,9 +5,9 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="col-span-1 md:col-span-1">
+          <div className="col-span-1">
             <Link href="/" className="text-2xl font-bold text-teal-400">
               WillowVibe
             </Link>
@@ -29,28 +29,48 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2">
               <li>
+                <Link href="/" className="text-gray-400 hover:text-teal-400 transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-gray-400 hover:text-teal-400 transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
                 <Link href="/services" className="text-gray-400 hover:text-teal-400 transition-colors">
                   Services
                 </Link>
               </li>
               <li>
                 <Link href="/work" className="text-gray-400 hover:text-teal-400 transition-colors">
-                  Portfolio
+                  Work
                 </Link>
               </li>
-              <li>
+               <li>
                 <Link href="/process" className="text-gray-400 hover:text-teal-400 transition-colors">
                   Process
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-teal-400 transition-colors">
-                  About Us
+                <Link href="/pricing" className="text-gray-400 hover:text-teal-400 transition-colors">
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="/technology" className="text-gray-400 hover:text-teal-400 transition-colors">
+                  Technology
                 </Link>
               </li>
               <li>
                 <Link href="/blog" className="text-gray-400 hover:text-teal-400 transition-colors">
                   Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-gray-400 hover:text-teal-400 transition-colors">
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -83,20 +103,6 @@ export default function Footer() {
               <li>
                 <Link href="/services" className="text-gray-400 hover:text-teal-400 transition-colors">
                   Cloud & DevOps
-                </Link>
-              </li>
-            </ul>
-
-             <h3 className="text-lg font-semibold mb-4 text-white mt-8">AI Resources</h3>
-            <ul className="space-y-2">
-               <li>
-                <Link href="/blog" className="text-gray-400 hover:text-teal-400 transition-colors">
-                  AI Case Studies
-                </Link>
-              </li>
-               <li>
-                <Link href="/blog" className="text-gray-400 hover:text-teal-400 transition-colors">
-                  AI Use Case Guide
                 </Link>
               </li>
             </ul>
