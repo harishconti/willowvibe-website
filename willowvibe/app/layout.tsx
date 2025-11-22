@@ -17,8 +17,25 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "WillowVibe - Digital Solutions",
-  description: "Professional IT services company specializing in Custom SaaS, Backend, Data Engineering, and Cloud Infrastructure.",
+  title: {
+    default: "WillowVibe Digital Solutions | Custom SaaS Development & AI Integration",
+    template: "%s | WillowVibe Digital Solutions"
+  },
+  description: "Professional IT services company in Bengaluru specializing in custom SaaS development, AI/LLM integration, data engineering, and cloud infrastructure.",
+  keywords: ["AI integration services India", "custom SaaS development", "data engineering Bengaluru", "SaaS development", "cloud infrastructure", "IT services Bengaluru"],
+  openGraph: {
+    title: "WillowVibe Digital Solutions",
+    description: "Professional IT services company in Bengaluru specializing in custom SaaS development, AI/LLM integration, data engineering, and cloud infrastructure.",
+    url: "https://willowvibe.github.io/willowvibe-website",
+    siteName: "WillowVibe Digital Solutions",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WillowVibe Digital Solutions",
+    description: "Professional IT services company in Bengaluru specializing in custom SaaS development, AI/LLM integration, data engineering, and cloud infrastructure.",
+  },
 };
 
 export default function RootLayout({

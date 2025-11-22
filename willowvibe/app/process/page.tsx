@@ -1,4 +1,13 @@
 import { Search, PenTool, Code, CheckSquare, Rocket, Headphones, Brain } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Development Process | WillowVibe Digital Solutions",
+  description: "A structured, transparent methodology ensuring your software project is delivered on time and within budget. From discovery to deployment.",
+  alternates: {
+    canonical: "https://willowvibe.github.io/willowvibe-website/process",
+  },
+};
 
 export default function Process() {
   const steps = [

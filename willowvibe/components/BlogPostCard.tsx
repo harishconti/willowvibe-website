@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 
 interface BlogPostCardProps {
@@ -24,11 +25,12 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({
   return (
     <div className="flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden h-full">
       {coverImage && (
-        <div className="h-48 overflow-hidden bg-gray-200">
-          <img
+        <div className="h-48 overflow-hidden bg-gray-200 relative">
+          <Image
             src={coverImage}
             alt={title}
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            fill
+            className="object-cover hover:scale-105 transition-transform duration-500"
           />
         </div>
       )}

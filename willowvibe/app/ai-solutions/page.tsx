@@ -13,6 +13,15 @@ import {
   ShieldCheck,
   MessageSquare
 } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "AI Solutions & Intelligent Automation | WillowVibe",
+  description: "Leverage cutting-edge AI and LLMs for your business. We specialize in RAG systems, chatbots, document intelligence, and AI-powered application development.",
+  alternates: {
+    canonical: "https://willowvibe.github.io/willowvibe-website/ai-solutions",
+  },
+};
 
 export default function AISolutions() {
   return (

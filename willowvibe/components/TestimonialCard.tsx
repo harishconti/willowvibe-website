@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Quote } from 'lucide-react';
 
 interface TestimonialCardProps {
@@ -26,10 +27,12 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       </div>
       <div className="flex items-center mt-auto">
         {authorImage ? (
-          <img
+          <Image
             src={authorImage}
             alt={authorName}
-            className="w-12 h-12 rounded-full mr-4 object-cover bg-gray-100"
+            width={48}
+            height={48}
+            className="rounded-full mr-4 object-cover bg-gray-100"
           />
         ) : (
           <div className="w-12 h-12 rounded-full mr-4 bg-teal-100 flex items-center justify-center text-teal-600 font-bold text-lg">

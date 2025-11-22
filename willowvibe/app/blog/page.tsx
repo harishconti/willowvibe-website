@@ -1,4 +1,13 @@
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tech Blog | Insights on AI, SaaS & Cloud Engineering | WillowVibe",
+  description: "Explore our technical tutorials, industry trends, and business advice on AI integration, custom SaaS development, and cloud infrastructure.",
+  alternates: {
+    canonical: "https://willowvibe.github.io/willowvibe-website/blog",
+  },
+};
 
 export default function Blog() {
   const posts = [

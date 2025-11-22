@@ -1,5 +1,15 @@
 import { Layout, Database, Cloud, HeartPulse, Code, Brain } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Services | Custom SaaS, AI & Data Engineering | WillowVibe",
+  description: "Explore our comprehensive IT services including Custom SaaS Development, AI & Intelligent Automation, Data Engineering, and Cloud Infrastructure management.",
+  alternates: {
+    canonical: "https://willowvibe.github.io/willowvibe-website/services",
+  },
+};
 
 const services = [
   {
@@ -133,9 +143,13 @@ export default function Services() {
                   Get Started
                 </Link>
               </div>
-              <div className="flex-1 bg-gray-100 rounded-2xl h-80 w-full flex items-center justify-center">
-                 {/* Placeholder for Service Illustration */}
-                 <span className="text-gray-400 font-medium">Illustration for {service.title}</span>
+              <div className="flex-1 bg-gray-100 rounded-2xl h-80 w-full flex items-center justify-center relative overflow-hidden">
+                 <Image
+                    src="/images/service-icon.svg"
+                    alt={service.title}
+                    fill
+                    className="object-cover opacity-50"
+                 />
               </div>
             </div>
           ))}
