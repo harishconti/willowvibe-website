@@ -116,6 +116,47 @@ export default function Pricing() {
             </div>
           </div>
 
+          {/* AI Pricing Section */}
+          <div className="mb-20">
+             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI Solution Packages</h3>
+             <div className="grid md:grid-cols-3 gap-8">
+                <div className="border border-gray-200 rounded-xl p-6">
+                   <h4 className="font-bold text-xl mb-2">AI Proof of Concept</h4>
+                   <p className="text-3xl font-bold text-teal-600 mb-4">₹1.5L - 3L</p>
+                   <p className="text-sm text-gray-500 mb-4">2-4 weeks duration</p>
+                   <ul className="space-y-2 text-sm text-gray-600 mb-6">
+                      <li>• Validate AI feasibility</li>
+                      <li>• Working prototype</li>
+                      <li>• Performance metrics</li>
+                   </ul>
+                </div>
+                <div className="border border-gray-200 rounded-xl p-6 bg-teal-50 border-teal-200">
+                   <h4 className="font-bold text-xl mb-2">AI Integration</h4>
+                   <p className="text-3xl font-bold text-teal-600 mb-4">₹4L - 8L</p>
+                   <p className="text-sm text-gray-500 mb-4">2-3 months duration</p>
+                   <ul className="space-y-2 text-sm text-gray-600 mb-6">
+                      <li>• Add AI to existing app</li>
+                      <li>• LLM API Integration</li>
+                      <li>• Production-ready features</li>
+                   </ul>
+                </div>
+                <div className="border border-gray-200 rounded-xl p-6">
+                   <h4 className="font-bold text-xl mb-2">Custom AI App</h4>
+                   <p className="text-3xl font-bold text-teal-600 mb-4">₹6L - 15L</p>
+                   <p className="text-sm text-gray-500 mb-4">3-6 months duration</p>
+                   <ul className="space-y-2 text-sm text-gray-600 mb-6">
+                      <li>• Full RAG or ML Pipeline</li>
+                      <li>• End-to-end solution</li>
+                      <li>• Custom architecture</li>
+                   </ul>
+                </div>
+             </div>
+             <div className="mt-6 p-4 bg-yellow-50 border border-yellow-100 rounded-lg text-sm text-yellow-800 flex items-start">
+                <HelpCircle className="h-5 w-5 mr-2 flex-shrink-0" />
+                <p><strong>Note on AI Costs:</strong> AI projects may incur ongoing API costs (OpenAI, Claude, etc.) typically ₹5,000-50,000/month depending on usage. We optimize for cost efficiency and provide transparent usage tracking.</p>
+             </div>
+          </div>
+
           {/* What's Included */}
           <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Included in All Projects</h3>
@@ -123,7 +164,8 @@ export default function Pricing() {
                 {[
                     "Project Management", "Git Version Control", "Automated Testing",
                     "API Documentation", "Deployment Assistance", "30-Day Support",
-                    "Source Code Ownership", "Weekly Updates", "Secure Architecture"
+                    "Source Code Ownership", "Weekly Updates", "Secure Architecture",
+                    "AI Model Justification", "Cost Optimization"
                 ].map((item, idx) => (
                     <div key={idx} className="flex items-center">
                         <Check className="h-5 w-5 text-teal-600 mr-3" />

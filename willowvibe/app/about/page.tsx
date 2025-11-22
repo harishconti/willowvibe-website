@@ -23,8 +23,11 @@ export default function About() {
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 WillowVibe was founded by an experienced Python Data Engineer with a vision to bring enterprise-level software quality to businesses of all sizes. Based in Bengaluru, India, we bridge the gap between complex technology and practical business solutions.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
                 We believe that robust, scalable technology shouldn't be the privilege of only large corporations. Whether you're a startup looking for an MVP or an established business needing digital transformation, we bring the same level of engineering rigor to every project.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                In 2024, we expanded our capabilities to include <strong>AI and LLM integration</strong>, recognizing the transformative potential of generative AI for businesses. We now combine traditional software development with cutting-edge AI to deliver intelligent, automated solutions.
               </p>
             </div>
             <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center">
@@ -94,9 +97,11 @@ export default function About() {
                     <h4 className="font-semibold text-gray-900 mb-2">Expertise:</h4>
                     <div className="flex flex-wrap gap-2">
                         <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700">Python</span>
+                        <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700">AI/LLM Development</span>
+                        <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700">RAG Systems</span>
                         <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700">FastAPI</span>
                         <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700">React Native</span>
-                        <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700">ETL</span>
+                        <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700">LangChain</span>
                         <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700">Kubernetes</span>
                     </div>
                 </div>

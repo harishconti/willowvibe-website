@@ -1,7 +1,21 @@
-import { Layout, Database, Cloud, HeartPulse, Code } from "lucide-react";
+import { Layout, Database, Cloud, HeartPulse, Code, Brain } from "lucide-react";
 import Link from "next/link";
 
 const services = [
+  {
+    id: "ai-automation",
+    title: "AI & Intelligent Automation",
+    description: "Leverage cutting-edge AI and LLMs to automate workflows, enhance decision-making, and deliver personalized experiences.",
+    icon: <Brain className="h-8 w-8 text-teal-600" />,
+    details: [
+      "Conversational AI Interfaces & Chatbots",
+      "RAG Systems (Retrieval-Augmented Generation)",
+      "Document Intelligence & Extraction",
+      "AI-Enhanced Analytics"
+    ],
+    timeline: "2-4 months",
+    price: "From ₹4,00,000"
+  },
   {
     id: "saas",
     title: "Custom SaaS Application Development",
@@ -11,7 +25,7 @@ const services = [
       "Web applications (React.js, FastAPI backends)",
       "Mobile apps (React Native - iOS, Android, Web)",
       "Progressive Web Apps (PWA)",
-      "API-first architectures"
+      "AI Enhancement: Chatbots, Smart Search, Content Gen"
     ],
     timeline: "3-6 months",
     price: "From ₹5,00,000"
@@ -23,8 +37,8 @@ const services = [
     icon: <Code className="h-8 w-8 text-indigo-600" />,
     details: [
       "RESTful API development with FastAPI",
-      "Database design & optimization",
-      "Authentication & authorization",
+      "AI/ML Model Serving APIs",
+      "Vector Database Backends",
       "Real-time features (WebSockets)"
     ],
     timeline: "1-3 months",
@@ -38,8 +52,8 @@ const services = [
     details: [
       "ETL pipeline design & implementation",
       "Apache Airflow orchestration",
-      "Data warehouse setup",
-      "Real-time data processing"
+      "Feature engineering for ML models",
+      "Real-time prediction services"
     ],
     timeline: "2-4 months",
     price: "From ₹3,00,000"

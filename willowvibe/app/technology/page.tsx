@@ -1,7 +1,17 @@
-import { Server, Smartphone, Database, Cloud, Code } from "lucide-react";
+import { Server, Smartphone, Database, Cloud, Code, Brain } from "lucide-react";
 
 export default function Technology() {
   const techCategories = [
+    {
+      title: "AI & Machine Learning",
+      icon: <Brain className="h-6 w-6 text-pink-600" />,
+      items: [
+        { name: "LLMs", desc: "OpenAI GPT-4, Anthropic Claude, Gemini" },
+        { name: "AI Frameworks", desc: "LangChain, LlamaIndex, Haystack" },
+        { name: "Vector Databases", desc: "Pinecone, Weaviate, ChromaDB" },
+        { name: "ML Infrastructure", desc: "MLflow, Hugging Face" }
+      ]
+    },
     {
       title: "Backend Development",
       icon: <Server className="h-6 w-6 text-teal-600" />,
@@ -105,6 +115,12 @@ export default function Technology() {
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Modern & Proven</h3>
                 <p className="text-gray-600">
                     We use technologies trusted by industry leaders like Netflix, Uber, and Instagram.
+                </p>
+             </div>
+             <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">AI-Ready</h3>
+                <p className="text-gray-600">
+                   Pre-integrated with leading LLM APIs and ML frameworks for rapid intelligent feature deployment.
                 </p>
              </div>
           </div>

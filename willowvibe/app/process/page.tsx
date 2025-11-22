@@ -1,4 +1,4 @@
-import { Search, PenTool, Code, CheckSquare, Rocket, Headphones } from "lucide-react";
+import { Search, PenTool, Code, CheckSquare, Rocket, Headphones, Brain } from "lucide-react";
 
 export default function Process() {
   const steps = [
@@ -9,7 +9,7 @@ export default function Process() {
       icon: <Search className="h-8 w-8 text-teal-600" />,
       items: [
         "Kickoff meeting & requirements gathering",
-        "Technical feasibility assessment",
+        "Technical feasibility assessment (AI readiness)",
         "User stories & feature prioritization",
         "Project timeline & cost estimation"
       ],
@@ -21,12 +21,26 @@ export default function Process() {
       duration: "1-2 weeks",
       icon: <PenTool className="h-8 w-8 text-blue-600" />,
       items: [
-        "System architecture design",
+        "System architecture design (including AI models)",
         "Database schema design",
         "API design & documentation",
-        "UI/UX wireframes & mockups"
+        "Prompt engineering strategy (for LLM projects)"
       ],
       deliverables: "Architecture diagrams, API specs, Design mockups"
+    },
+    {
+      phase: "AI Special",
+      title: "For AI Projects, We Add:",
+      duration: "Parallel",
+      icon: <Brain className="h-8 w-8 text-pink-600" />,
+      items: [
+        "Proof of Concept (PoC) to validate feasibility",
+        "Model evaluation and selection",
+        "Training data preparation",
+        "Prompt engineering & testing",
+        "Cost optimization analysis"
+      ],
+      deliverables: "PoC Report, Model Benchmarks"
     },
     {
       phase: "Phase 3",
