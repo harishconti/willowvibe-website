@@ -105,6 +105,11 @@ export default function Footer() {
                   Cloud & DevOps
                 </Link>
               </li>
+              <li className="pt-4">
+                <Link href="/resources/saas-guide" className="text-teal-300 hover:text-teal-400 transition-colors font-medium flex items-center">
+                   <span className="bg-teal-900/50 px-2 py-0.5 rounded text-xs mr-2 border border-teal-800">Free</span> SaaS Dev Guide 2025
+                </Link>
+              </li>
             </ul>
           </div>
 

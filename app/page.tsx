@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import TrustedBy from "@/components/TrustedBy";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 
 export const metadata: Metadata = {
   title: "WillowVibe Digital Solutions | Custom SaaS Development & AI Integration",
@@ -17,6 +18,16 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+      <ExitIntentPopup />
+
+      {/* Promotional Banner */}
+      <div className="bg-teal-900 text-teal-100 px-4 py-3 text-sm text-center font-medium relative z-50">
+        <span className="inline-block mr-2">🚀 New: The Complete SaaS Development Guide 2025 is out!</span>
+        <Link href="/resources/saas-guide" className="underline hover:text-white font-bold">
+          Download Free PDF &rarr;
+        </Link>
+      </div>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-50 to-teal-50 py-20 lg:py-32 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
