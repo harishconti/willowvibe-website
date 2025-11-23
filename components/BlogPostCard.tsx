@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
+import { getOptimizedImage } from '@/lib/images';
 
 interface BlogPostCardProps {
   title: string;
@@ -22,16 +23,21 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({
   category,
   coverImage
 }) => {
+  const optimizedImage = coverImage ? getOptimizedImage(coverImage) : null;
+
   return (
     <div className="flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden h-full">
-      {coverImage && (
+      {optimizedImage && (
         <div className="h-48 overflow-hidden bg-gray-200 relative">
           <Image
-            src={coverImage}
+            src={optimizedImage.src}
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+            placeholder={optimizedImage.blurDataURL ? "blur" : "empty"}
+            blurDataURL={optimizedImage.blurDataURL}
           />
         </div>
       )}

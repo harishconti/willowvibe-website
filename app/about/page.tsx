@@ -75,6 +75,8 @@ export default function About() {
                 alt="Office Team Illustration"
                 fill
                 className="object-cover opacity-50"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                loading="lazy"
               />
             </div>
           </div>

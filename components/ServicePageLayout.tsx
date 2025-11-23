@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Check, ArrowRight, CheckCircle } from 'lucide-react';
+import { getOptimizedImage } from '@/lib/images';
 import TechStackBadge from './TechStackBadge';
 import ProcessStep from './ProcessStep';
 import FAQ from './FAQ';
@@ -58,12 +59,22 @@ export default function ServicePageLayout({
   pricing,
   faqs,
 }: ServicePageProps) {
+  const optimizedHero = getOptimizedImage(heroImage);
+
   return (
     <div className="bg-white">
       {/* HERO SECTION */}
       <section className="relative bg-teal-900 text-white py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10">
-            <Image src={heroImage} alt="Background" fill className="object-cover" />
+            <Image
+              src={optimizedHero.src}
+              alt="Background"
+              fill
+              className="object-cover"
+              priority
+              placeholder={optimizedHero.blurDataURL ? "blur" : "empty"}
+              blurDataURL={optimizedHero.blurDataURL}
+            />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -78,7 +89,16 @@ export default function ServicePageLayout({
               </Link>
             </div>
             <div className="hidden md:block relative h-64 lg:h-96 w-full">
-                <Image src={heroImage} alt={serviceName} fill className="object-contain" />
+                <Image
+                  src={optimizedHero.src}
+                  alt={serviceName}
+                  fill
+                  className="object-contain"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  placeholder={optimizedHero.blurDataURL ? "blur" : "empty"}
+                  blurDataURL={optimizedHero.blurDataURL}
+                />
             </div>
           </div>
         </div>
@@ -212,7 +232,21 @@ export default function ServicePageLayout({
                         </div>
                     </div>
                     <div className="bg-gray-200 relative min-h-[300px]">
-                         <Image src={caseStudy.image} alt={caseStudy.title} fill className="object-cover" />
+                         {(() => {
+                           const optimizedCaseStudy = getOptimizedImage(caseStudy.image);
+                           return (
+                             <Image
+                               src={optimizedCaseStudy.src}
+                               alt={caseStudy.title}
+                               fill
+                               className="object-cover"
+                               sizes="(max-width: 768px) 100vw, 33vw"
+                               loading="lazy"
+                               placeholder={optimizedCaseStudy.blurDataURL ? "blur" : "empty"}
+                               blurDataURL={optimizedCaseStudy.blurDataURL}
+                             />
+                           );
+                         })()}
                     </div>
                 </div>
             </div>

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { Linkedin, Check, ChevronDown, ChevronUp, Award } from 'lucide-react';
 import { TeamMember as TeamMemberType } from '@/data/team';
+import { getOptimizedImage } from '@/lib/images';
 
 interface TeamMemberProps {
   member: TeamMemberType;
@@ -34,6 +35,8 @@ const TeamMember: React.FC<TeamMemberProps> = ({ member }) => {
   const visibleExpertise = member.expertise.slice(0, MAX_VISIBLE_TAGS);
   const remainingExpertiseCount = member.expertise.length - MAX_VISIBLE_TAGS;
 
+  const optimizedImage = getOptimizedImage(member.image);
+
   return (
     <div
       className="bg-white rounded-lg border border-[var(--color-card-border)] shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 p-6 flex flex-col h-full group relative overflow-hidden"
@@ -41,11 +44,14 @@ const TeamMember: React.FC<TeamMemberProps> = ({ member }) => {
       <div className="flex flex-col items-center mb-4">
         <div className="relative w-48 h-48 mb-4 rounded-full overflow-hidden border-4 border-teal-50 shadow-inner">
            <Image
-            src={member.image}
+            src={optimizedImage.src}
             alt={`Photo of ${member.name}, ${member.role} at WillowVibe`}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width: 768px) 192px, 192px"
+            loading="lazy"
+            placeholder={optimizedImage.blurDataURL ? "blur" : "empty"}
+            blurDataURL={optimizedImage.blurDataURL}
           />
         </div>
         <h3 className="text-xl font-bold text-gray-900 text-center mb-1">{member.name}</h3>

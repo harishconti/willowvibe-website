@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Quote } from 'lucide-react';
+import { getOptimizedImage } from '@/lib/images';
 
 interface TestimonialCardProps {
   quote: string;
@@ -15,6 +16,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   authorTitle,
   authorImage
 }) => {
+  const optimizedImage = authorImage ? getOptimizedImage(authorImage) : null;
+
   return (
     <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative h-full flex flex-col">
       <div className="absolute top-6 left-6 opacity-10">
@@ -26,13 +29,16 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         </p>
       </div>
       <div className="flex items-center mt-auto">
-        {authorImage ? (
+        {optimizedImage ? (
           <Image
-            src={authorImage}
+            src={optimizedImage.src}
             alt={authorName}
             width={48}
             height={48}
             className="rounded-full mr-4 object-cover bg-gray-100"
+            loading="lazy"
+            placeholder={optimizedImage.blurDataURL ? "blur" : "empty"}
+            blurDataURL={optimizedImage.blurDataURL}
           />
         ) : (
           <div className="w-12 h-12 rounded-full mr-4 bg-teal-100 flex items-center justify-center text-teal-600 font-bold text-lg">
