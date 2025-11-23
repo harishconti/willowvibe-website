@@ -9,6 +9,8 @@ import {
   Search
 } from 'lucide-react';
 import { Metadata } from 'next';
+import StructuredData from '@/components/StructuredData';
+import { generateServiceSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: "AI & Automation Services | Custom LLM & RAG Solutions",
@@ -16,7 +18,23 @@ export const metadata: Metadata = {
 };
 
 export default function AIAutomationPage() {
+  const serviceData = {
+    name: 'AI & Intelligent Automation',
+    description: 'Integrate AI into your business with custom LLM solutions, RAG systems, chatbots, and intelligent process automation.',
+    url: 'https://harishconti.github.io/willowvibe-website/services/ai-automation',
+    priceRange: '$10000-$50000+',
+  };
+
+  const breadcrumbItems = [
+    { name: 'Home', url: 'https://harishconti.github.io/willowvibe-website' },
+    { name: 'Services', url: 'https://harishconti.github.io/willowvibe-website/services' },
+    { name: 'AI & Intelligent Automation', url: 'https://harishconti.github.io/willowvibe-website/services/ai-automation' },
+  ];
+
   return (
+    <>
+    <StructuredData data={generateServiceSchema(serviceData)} />
+    <StructuredData data={generateBreadcrumbSchema(breadcrumbItems)} />
     <ServicePageLayout
       serviceName="AI & Intelligent Automation"
       heroDescription="Harness the power of Generative AI and LLMs to automate workflows, unlock data insights, and deliver personalized customer experiences."
@@ -175,5 +193,6 @@ export default function AIAutomationPage() {
         }
       ]}
     />
+    </>
   );
 }
