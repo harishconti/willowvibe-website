@@ -5,8 +5,13 @@ import Link from 'next/link';
 import { Plus, Minus } from 'lucide-react';
 import { faqs } from '@/data/faqs';
 
-export default function FAQ() {
+interface FAQProps {
+  items?: { question: string; answer: string }[];
+}
+
+export default function FAQ({ items }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const displayFaqs = items || faqs;
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -25,7 +30,7 @@ export default function FAQ() {
         </div>
 
         <div className="space-y-4">
-          {faqs.map((faq, index) => (
+          {displayFaqs.map((faq, index) => (
             <div
               key={index}
               className="border-b border-gray-200 last:border-0"

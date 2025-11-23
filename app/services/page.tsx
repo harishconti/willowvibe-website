@@ -17,6 +17,7 @@ const services = [
     title: "AI & Intelligent Automation",
     description: "Leverage cutting-edge AI and LLMs to automate workflows, enhance decision-making, and deliver personalized experiences.",
     icon: <Brain className="h-8 w-8 text-teal-600" />,
+    link: "/services/ai-automation",
     details: [
       "Conversational AI Interfaces & Chatbots",
       "RAG Systems (Retrieval-Augmented Generation)",
@@ -31,6 +32,7 @@ const services = [
     title: "Custom SaaS Application Development",
     description: "Build scalable web and mobile applications tailored to your unique business needs.",
     icon: <Layout className="h-8 w-8 text-teal-600" />,
+    link: "/services/saas-development",
     details: [
       "Web applications (React.js, FastAPI backends)",
       "Mobile apps (React Native - iOS, Android, Web)",
@@ -45,6 +47,7 @@ const services = [
     title: "Backend & API Development",
     description: "Robust, secure, and high-performance backend systems to power your digital products.",
     icon: <Code className="h-8 w-8 text-indigo-600" />,
+    link: "/contact",
     details: [
       "RESTful API development with FastAPI",
       "AI/ML Model Serving APIs",
@@ -59,6 +62,7 @@ const services = [
     title: "Data Engineering & ETL Pipelines",
     description: "Transform raw data into actionable insights with automated pipelines and efficient storage.",
     icon: <Database className="h-8 w-8 text-blue-600" />,
+    link: "/services/data-engineering",
     details: [
       "ETL pipeline design & implementation",
       "Apache Airflow orchestration",
@@ -73,6 +77,7 @@ const services = [
     title: "Cloud Infrastructure & DevOps",
     description: "Scalable, secure, and automated infrastructure to ensure your applications are always running.",
     icon: <Cloud className="h-8 w-8 text-orange-600" />,
+    link: "/services/cloud-devops",
     details: [
       "Kubernetes cluster setup & management",
       "Docker containerization",
@@ -87,6 +92,7 @@ const services = [
     title: "Healthcare Technology Solutions",
     description: "Specialized software for clinics and healthcare providers, ensuring compliance and efficiency.",
     icon: <HeartPulse className="h-8 w-8 text-red-600" />,
+    link: "/contact",
     details: [
       "Patient management systems",
       "Clinic software (like Clinic OS Lite)",
@@ -139,7 +145,7 @@ export default function Services() {
                     </div>
                 </div>
 
-                <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 transition-colors">
+                <Link href={service.link} className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 transition-colors">
                   Get Started
                 </Link>
               </div>
