@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, CheckCircle, Server, Database, Cloud, Code, Smartphone, Layout, Brain, Zap } from "lucide-react";
+import { getOptimizedImage } from "@/lib/images";
 import { Metadata } from "next";
 import TrustedBy from "@/components/TrustedBy";
 import Testimonials from "@/components/Testimonials";
@@ -60,14 +61,21 @@ export default function Home() {
             </div>
             <div className="lg:w-1/2 flex justify-center lg:justify-end">
                <div className="relative w-full max-w-lg h-[300px] md:h-[400px]">
-                 <Image
-                    src="/images/hero-illustration.svg"
-                    alt="WillowVibe Digital Solutions Hero"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-contain"
-                    priority
-                 />
+                 {(() => {
+                   const optimizedHero = getOptimizedImage("/images/hero-illustration.svg");
+                   return (
+                     <Image
+                        src={optimizedHero.src}
+                        alt="WillowVibe Digital Solutions Hero"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-contain"
+                        priority
+                        placeholder={optimizedHero.blurDataURL ? "blur" : "empty"}
+                        blurDataURL={optimizedHero.blurDataURL}
+                     />
+                   );
+                 })()}
                </div>
             </div>
           </div>
@@ -211,13 +219,20 @@ export default function Home() {
             </div>
             <div className="bg-gray-100 rounded-2xl p-8 h-96 flex items-center justify-center relative overflow-hidden">
               <div className="absolute inset-0 flex items-center justify-center">
-                 <Image
-                    src="/images/tech-stack-logos.svg"
-                    alt="WillowVibe Tech Stack"
-                    width={400}
-                    height={300}
-                    className="object-contain opacity-80 hover:opacity-100 transition-opacity"
-                 />
+                 {(() => {
+                   const optimizedTech = getOptimizedImage("/images/tech-stack-logos.svg");
+                   return (
+                     <Image
+                        src={optimizedTech.src}
+                        alt="WillowVibe Tech Stack"
+                        width={400}
+                        height={300}
+                        className="object-contain opacity-80 hover:opacity-100 transition-opacity"
+                        placeholder={optimizedTech.blurDataURL ? "blur" : "empty"}
+                        blurDataURL={optimizedTech.blurDataURL}
+                     />
+                   );
+                 })()}
               </div>
             </div>
           </div>
@@ -253,13 +268,21 @@ export default function Home() {
               </Link>
             </div>
             <div className="order-1 md:order-2 bg-teal-800 rounded-xl h-80 flex items-center justify-center relative overflow-hidden">
-              <Image
-                src="/images/clinic-os-lite.svg"
-                alt="Clinic OS Lite Screenshot"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-contain p-4"
-              />
+              {(() => {
+                 const optimizedClinic = getOptimizedImage("/images/clinic-os-lite.svg");
+                 return (
+                   <Image
+                    src={optimizedClinic.src}
+                    alt="Clinic OS Lite Screenshot"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-contain p-4"
+                    loading="lazy"
+                    placeholder={optimizedClinic.blurDataURL ? "blur" : "empty"}
+                    blurDataURL={optimizedClinic.blurDataURL}
+                  />
+                 );
+              })()}
             </div>
           </div>
         </div>
