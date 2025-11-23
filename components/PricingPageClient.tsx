@@ -1,12 +1,18 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Check, HelpCircle, ArrowRight, X } from 'lucide-react';
 import FAQ from './FAQ';
+import { analytics } from '@/lib/analytics';
+import TrackedLink from '@/components/TrackedLink';
 
 export default function PricingPageClient() {
   const [pricingMode, setPricingMode] = useState<'project' | 'retainer'>('project');
+
+  useEffect(() => {
+    analytics.viewPricing();
+  }, []);
 
   return (
     <div className="bg-white">
@@ -75,12 +81,14 @@ export default function PricingPageClient() {
                     </li>
                   ))}
                 </ul>
-                <Link
+                <TrackedLink
                   href="/contact"
+                  eventAction="scheduleConsultation"
+                  eventData="pricing-page-starter"
                   className="block w-full py-3 text-center border-2 border-teal-600 text-teal-600 font-bold rounded-lg hover:bg-teal-50 transition-colors"
                 >
                   Start Your MVP
-                </Link>
+                </TrackedLink>
               </div>
 
               {/* TIER 2: Professional */}
@@ -113,12 +121,14 @@ export default function PricingPageClient() {
                     </li>
                   ))}
                 </ul>
-                <Link
+                <TrackedLink
                   href="/contact"
+                  eventAction="scheduleConsultation"
+                  eventData="pricing-page-professional"
                   className="block w-full py-3 text-center bg-teal-600 text-white font-bold rounded-lg hover:bg-teal-700 transition-colors"
                 >
                   Get Custom Quote
-                </Link>
+                </TrackedLink>
               </div>
 
               {/* TIER 3: Enterprise */}
@@ -148,12 +158,14 @@ export default function PricingPageClient() {
                     </li>
                   ))}
                 </ul>
-                <Link
+                <TrackedLink
                   href="/contact"
+                  eventAction="scheduleConsultation"
+                  eventData="pricing-page-enterprise"
                   className="block w-full py-3 text-center border-2 border-teal-600 text-teal-600 font-bold rounded-lg hover:bg-teal-50 transition-colors"
                 >
                   Schedule Enterprise Call
-                </Link>
+                </TrackedLink>
               </div>
             </div>
           )}
@@ -182,12 +194,14 @@ export default function PricingPageClient() {
                     </li>
                   ))}
                 </ul>
-                <Link
+                <TrackedLink
                   href="/contact"
+                  eventAction="scheduleConsultation"
+                  eventData="pricing-page-retainer-growth"
                   className="block w-full py-3 text-center border-2 border-teal-600 text-teal-600 font-bold rounded-lg hover:bg-teal-50 transition-colors"
                 >
                   Start Subscription
-                </Link>
+                </TrackedLink>
               </div>
 
               {/* Scale */}
@@ -215,12 +229,14 @@ export default function PricingPageClient() {
                     </li>
                   ))}
                 </ul>
-                <Link
+                <TrackedLink
                   href="/contact"
+                  eventAction="scheduleConsultation"
+                  eventData="pricing-page-retainer-scale"
                   className="block w-full py-3 text-center bg-teal-600 text-white font-bold rounded-lg hover:bg-teal-700 transition-colors"
                 >
                   Hire Dedicated Dev
-                </Link>
+                </TrackedLink>
               </div>
 
               {/* Enterprise Retainer */}
@@ -245,12 +261,14 @@ export default function PricingPageClient() {
                     </li>
                   ))}
                 </ul>
-                <Link
+                <TrackedLink
                   href="/contact"
+                  eventAction="scheduleConsultation"
+                  eventData="pricing-page-retainer-enterprise"
                   className="block w-full py-3 text-center border-2 border-teal-600 text-teal-600 font-bold rounded-lg hover:bg-teal-50 transition-colors"
                 >
                   Contact Sales
-                </Link>
+                </TrackedLink>
               </div>
             </div>
           )}
@@ -402,12 +420,14 @@ export default function PricingPageClient() {
          <div className="max-w-3xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Not sure which package fits?</h2>
             <p className="text-xl text-gray-600 mb-8">Schedule a free consultation and we'll help you choose the best path for your business.</p>
-            <Link
+            <TrackedLink
                href="/contact"
+               eventAction="scheduleConsultation"
+               eventData="pricing-page-bottom-cta"
                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal-600 rounded-lg hover:bg-teal-700 transition-all"
              >
                Schedule Free Consultation <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            </TrackedLink>
          </div>
       </section>
 

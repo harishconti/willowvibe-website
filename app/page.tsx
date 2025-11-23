@@ -6,6 +6,7 @@ import TrustedBy from "@/components/TrustedBy";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
+import TrackedLink from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "WillowVibe Digital Solutions | Custom SaaS Development & AI Integration",
@@ -40,13 +41,15 @@ export default function Home() {
                 Full-stack development, <strong>AI integration</strong>, data engineering, and cloud infrastructure for modern businesses. We build enterprise-grade software that grows with you.
               </p>
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                <Link
+                <TrackedLink
                   href="/contact"
+                  eventAction="scheduleConsultation"
+                  eventData="hero"
                   className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal-600 rounded-lg hover:bg-teal-700 transition-all shadow-lg hover:shadow-xl"
                 >
                   Schedule a Free Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                </TrackedLink>
                 <Link
                   href="/work"
                   className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal-700 bg-white border border-teal-200 rounded-lg hover:bg-teal-50 transition-all shadow-sm"
@@ -94,9 +97,14 @@ export default function Home() {
               <p className="text-gray-600 mb-6">
                 Build scalable web and mobile applications with modern frameworks like React, Next.js, and React Native.
               </p>
-              <Link href="/services" className="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center">
+              <TrackedLink
+                href="/services"
+                eventAction="serviceClick"
+                eventData="Custom SaaS Development"
+                className="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center"
+              >
                 Learn more <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
+              </TrackedLink>
             </div>
 
             {/* Service 2 (AI - NEW) */}
@@ -108,9 +116,14 @@ export default function Home() {
               <p className="text-gray-600 mb-6">
                 Leverage LLMs and AI to automate workflows, enhance decision-making, and build intelligent chatbots.
               </p>
-              <Link href="/ai-solutions" className="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center">
+              <TrackedLink
+                href="/ai-solutions"
+                eventAction="serviceClick"
+                eventData="AI & Intelligent Automation"
+                className="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center"
+              >
                 Learn more <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
+              </TrackedLink>
             </div>
 
             {/* Service 3 */}
@@ -122,9 +135,14 @@ export default function Home() {
               <p className="text-gray-600 mb-6">
                 Robust ETL pipelines, data automation, and Apache Airflow orchestration to turn data into insights.
               </p>
-              <Link href="/services" className="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center">
+              <TrackedLink
+                href="/services"
+                eventAction="serviceClick"
+                eventData="Data Engineering"
+                className="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center"
+              >
                 Learn more <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
+              </TrackedLink>
             </div>
 
             {/* Service 4 */}
@@ -136,9 +154,14 @@ export default function Home() {
               <p className="text-gray-600 mb-6">
                 Kubernetes deployment, CI/CD automation, and secure infrastructure management on GCP and AWS.
               </p>
-              <Link href="/services" className="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center">
+              <TrackedLink
+                href="/services"
+                eventAction="serviceClick"
+                eventData="Cloud & DevOps"
+                className="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center"
+              >
                 Learn more <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
+              </TrackedLink>
             </div>
           </div>
         </div>
@@ -285,12 +308,14 @@ export default function Home() {
             Let's discuss how we can help you transform your business with cutting-edge technology.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-             <Link
+             <TrackedLink
                 href="/contact"
+                eventAction="scheduleConsultation"
+                eventData="home-bottom"
                 className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal-600 rounded-lg hover:bg-teal-700 transition-all shadow-lg hover:shadow-xl"
               >
                 Schedule a Free Consultation
-              </Link>
+              </TrackedLink>
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Check, Loader2, Download, AlertCircle } from "lucide-react";
+import { analytics } from "@/lib/analytics";
 
 export default function LeadMagnetForm() {
   const [formData, setFormData] = useState({
@@ -42,6 +43,7 @@ export default function LeadMagnetForm() {
 
       // Success
       setStatus("success");
+      analytics.downloadGuide('SaaS Guide');
 
       // Trigger download
       const link = document.createElement('a');

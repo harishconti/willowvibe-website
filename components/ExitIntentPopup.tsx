@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { X, FileText, ArrowRight } from "lucide-react";
+import { analytics } from "@/lib/analytics";
 
 export default function ExitIntentPopup() {
   const [isVisible, setIsVisible] = useState(false);
@@ -66,7 +67,10 @@ export default function ExitIntentPopup() {
 
                 <Link
                     href="/resources/saas-guide"
-                    onClick={handleDismiss}
+                    onClick={() => {
+                        handleDismiss();
+                        analytics.downloadGuide('SaaS Guide');
+                    }}
                     className="flex w-full items-center justify-center px-6 py-3 text-sm font-bold text-white bg-teal-600 rounded-lg hover:bg-teal-700 transition-all shadow-md hover:shadow-lg group"
                 >
                     Download Free Guide
