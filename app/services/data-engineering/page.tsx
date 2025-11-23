@@ -9,6 +9,8 @@ import {
   ShieldCheck
 } from 'lucide-react';
 import { Metadata } from 'next';
+import StructuredData from '@/components/StructuredData';
+import { generateServiceSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: "Data Engineering Services | ETL Pipelines & Analytics",
@@ -16,7 +18,23 @@ export const metadata: Metadata = {
 };
 
 export default function DataEngineeringPage() {
+  const serviceData = {
+    name: 'Data Engineering',
+    description: 'Build robust data infrastructure with our data engineering services. ETL pipelines, data warehousing, and real-time analytics architecture.',
+    url: 'https://harishconti.github.io/willowvibe-website/services/data-engineering',
+    priceRange: '$15000-$60000+',
+  };
+
+  const breadcrumbItems = [
+    { name: 'Home', url: 'https://harishconti.github.io/willowvibe-website' },
+    { name: 'Services', url: 'https://harishconti.github.io/willowvibe-website/services' },
+    { name: 'Data Engineering', url: 'https://harishconti.github.io/willowvibe-website/services/data-engineering' },
+  ];
+
   return (
+    <>
+    <StructuredData data={generateServiceSchema(serviceData)} />
+    <StructuredData data={generateBreadcrumbSchema(breadcrumbItems)} />
     <ServicePageLayout
       serviceName="Data Engineering"
       heroDescription="Turn raw data into a strategic asset. We build the pipelines, warehouses, and infrastructure that power data-driven decisions."
@@ -175,5 +193,6 @@ export default function DataEngineeringPage() {
         }
       ]}
     />
+    </>
   );
 }

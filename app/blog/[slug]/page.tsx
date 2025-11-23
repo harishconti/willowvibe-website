@@ -7,6 +7,8 @@ import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { Metadata } from "next";
+import StructuredData from '@/components/StructuredData';
+import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
 export async function generateStaticParams() {
   const slugs = getAllPostSlugs();
@@ -90,25 +92,26 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
     },
   };
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    datePublished: post.date,
-    author: {
-      '@type': 'Person',
-      name: post.author,
-    },
+  const articleData = {
+    title: post.title,
     description: post.excerpt,
-    keywords: post.tags.join(', '),
+    datePublished: post.date,
+    dateModified: post.date, // Assuming modified date is same as published if not available
+    author: post.author,
+    url: `https://harishconti.github.io/willowvibe-website/blog/${post.slug}`,
+    image: `https://harishconti.github.io/willowvibe-website/images/blog/${post.slug}.jpg`, // Placeholder logic or if image available in post object
   };
+
+  const breadcrumbItems = [
+    { name: 'Home', url: 'https://harishconti.github.io/willowvibe-website' },
+    { name: 'Blog', url: 'https://harishconti.github.io/willowvibe-website/blog' },
+    { name: post.title, url: `https://harishconti.github.io/willowvibe-website/blog/${post.slug}` },
+  ];
 
   return (
     <div className="bg-white min-h-screen">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <StructuredData data={generateArticleSchema(articleData)} />
+      <StructuredData data={generateBreadcrumbSchema(breadcrumbItems)} />
 
         {/* Header */}
       <div className="bg-teal-900 py-20">

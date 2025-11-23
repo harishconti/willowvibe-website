@@ -9,6 +9,8 @@ import {
   Container
 } from 'lucide-react';
 import { Metadata } from 'next';
+import StructuredData from '@/components/StructuredData';
+import { generateServiceSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: "Cloud & DevOps Services | AWS, GCP & Kubernetes",
@@ -16,7 +18,23 @@ export const metadata: Metadata = {
 };
 
 export default function CloudDevOpsPage() {
+  const serviceData = {
+    name: 'Cloud Infrastructure & DevOps',
+    description: 'Modernize your infrastructure with our Cloud & DevOps services. We specialize in Kubernetes, Docker, CI/CD automation, and cloud migration.',
+    url: 'https://harishconti.github.io/willowvibe-website/services/cloud-devops',
+    priceRange: '$10000-$50000+',
+  };
+
+  const breadcrumbItems = [
+    { name: 'Home', url: 'https://harishconti.github.io/willowvibe-website' },
+    { name: 'Services', url: 'https://harishconti.github.io/willowvibe-website/services' },
+    { name: 'Cloud Infrastructure & DevOps', url: 'https://harishconti.github.io/willowvibe-website/services/cloud-devops' },
+  ];
+
   return (
+    <>
+    <StructuredData data={generateServiceSchema(serviceData)} />
+    <StructuredData data={generateBreadcrumbSchema(breadcrumbItems)} />
     <ServicePageLayout
       serviceName="Cloud Infrastructure & DevOps"
       heroDescription="Build a resilient, scalable, and automated foundation for your software. We streamline deployment and optimize cloud costs."
@@ -175,5 +193,6 @@ export default function CloudDevOpsPage() {
         }
       ]}
     />
+    </>
   );
 }
