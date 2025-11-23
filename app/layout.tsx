@@ -46,7 +46,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+              document.documentElement.classList.toggle('dark', theme === 'dark');
+            })()
+          `,
+        }}
+      />
       <body
         className={`${inter.variable} ${openSans.variable} font-sans antialiased flex flex-col min-h-screen`}
       >
