@@ -3,6 +3,9 @@ import { Award, Users, Lightbulb, User } from "lucide-react";
 import { Metadata } from "next";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
+import TeamMember from "@/components/TeamMember";
+import { teamMembers } from "@/data/team";
+import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
   title: "About Us | WillowVibe Digital Solutions",
@@ -13,8 +16,33 @@ export const metadata: Metadata = {
 };
 
 export default function About() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WillowVibe Digital Solutions",
+    "url": "https://willowvibe.github.io/willowvibe-website",
+    "logo": "https://willowvibe.github.io/willowvibe-website/images/logo.png",
+    "foundingDate": "2024",
+    "founders": teamMembers.map(member => ({
+      "@type": "Person",
+      "name": member.name,
+      "jobTitle": member.role,
+      "image": `https://willowvibe.github.io/willowvibe-website${member.image}`,
+      "sameAs": [member.linkedin]
+    })),
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "contact@willowvibe.com"
+    }
+  };
+
   return (
     <div className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Header */}
       <div className="bg-teal-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -32,13 +60,13 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                WillowVibe was founded by an experienced Python Data Engineer with a vision to bring enterprise-level software quality to businesses of all sizes. Based in Bengaluru, India, we bridge the gap between complex technology and practical business solutions.
+                Founded in 2024 by three technology experts, WillowVibe brings together over 15 years of combined experience in software engineering, cloud architecture, and industrial solutions. Based in Bengaluru, India, we bridge the gap between complex enterprise technology and practical business needs.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                We believe that robust, scalable technology shouldn't be the privilege of only large corporations. Whether you're a startup looking for an MVP or an established business needing digital transformation, we bring the same level of engineering rigor to every project.
+                Our mission is simple yet ambitious: to make robust, scalable technology accessible to businesses of all sizes. Whether you're a startup needing a rapid MVP or an established enterprise seeking digital transformation, we apply the same rigorous engineering standards to every project.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                In 2024, we expanded our capabilities to include <strong>AI and LLM integration</strong>, recognizing the transformative potential of generative AI for businesses. We now combine traditional software development with cutting-edge AI to deliver intelligent, automated solutions.
+                Recognizing the transformative power of Generative AI, we have integrated cutting-edge AI and LLM capabilities into our core offerings, allowing us to deliver intelligent, future-ready solutions that drive real growth.
               </p>
             </div>
             <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center relative overflow-hidden">
@@ -65,7 +93,7 @@ export default function About() {
                 <Award className="h-6 w-6 text-teal-600" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Technical Excellence</h3>
-              <p className="text-gray-600 text-sm">5+ years of industry experience delivering high-quality code.</p>
+              <p className="text-gray-600 text-sm">Decades of combined industry experience delivering high-quality code.</p>
             </div>
             <div className="text-center p-6 bg-white rounded-xl shadow-sm">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -92,40 +120,40 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Meet the Founders */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Meet the Lead</h2>
-          <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-            <div className="md:flex">
-              <div className="md:flex-shrink-0 bg-gray-200 md:w-64 flex items-center justify-center relative">
-                 <Image
-                   src="/images/team-photo.svg"
-                   alt="Harish Conti"
-                   fill
-                   className="object-cover"
-                 />
-              </div>
-              <div className="p-8">
-                <div className="uppercase tracking-wide text-sm text-teal-600 font-semibold">Founder & Lead Engineer</div>
-                <h3 className="mt-1 text-2xl font-bold text-gray-900">Harish Conti</h3>
-                <p className="mt-4 text-gray-600 leading-relaxed">
-                  With over 5 years of experience in enterprise software development, Harish specializes in Python, FastAPI, React Native, and Cloud Infrastructure. His background includes working with MedImpact, where he honed his skills in healthcare technology, ETL pipelines, and Kubernetes deployments.
-                </p>
-                <div className="mt-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">Expertise:</h4>
-                    <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700">Python</span>
-                        <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700">AI/LLM Development</span>
-                        <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700">RAG Systems</span>
-                        <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700">FastAPI</span>
-                        <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700">React Native</span>
-                        <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700">LangChain</span>
-                        <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700">Kubernetes</span>
-                    </div>
-                </div>
-              </div>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet the Team Behind WillowVibe</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Combining 15+ years of expertise in software engineering, AI, data pipelines, and full-stack development.
+            </p>
+          </div>
+
+          {/* Combined Expertise Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 bg-teal-50 rounded-2xl p-8 border border-teal-100">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-teal-700 mb-1">15+</div>
+              <div className="text-sm text-teal-900 font-medium">Years Combined Experience</div>
             </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-teal-700 mb-1">100+</div>
+              <div className="text-sm text-teal-900 font-medium">Projects Delivered</div>
+            </div>
+             <div className="text-center">
+              <div className="text-3xl font-bold text-teal-700 mb-1">3</div>
+              <div className="text-sm text-teal-900 font-medium">Technology Domains</div>
+            </div>
+             <div className="text-center">
+              <div className="text-3xl font-bold text-teal-700 mb-1">Multi</div>
+              <div className="text-sm text-teal-900 font-medium">Industry Expertise</div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <TeamMember key={index} member={member} />
+            ))}
           </div>
         </div>
       </section>
@@ -135,6 +163,14 @@ export default function About() {
 
        {/* FAQ Section */}
        <FAQ />
+
+       {/* CTA Section */}
+       <CTASection
+         title="Ready to Work with Us?"
+         description="Leverage our combined expertise to build your next big project."
+         primaryButtonText="Contact Us"
+         primaryButtonLink="/contact"
+       />
 
        {/* Company Details */}
       <section className="py-12 bg-gray-50 border-t border-gray-200">
