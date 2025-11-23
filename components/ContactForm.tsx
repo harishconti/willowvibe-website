@@ -2,6 +2,7 @@
 
 import { Mail, MapPin, Phone, Clock, Loader2, CheckCircle, AlertCircle } from "lucide-react";
 import { useState } from "react";
+import { analytics } from "@/lib/analytics";
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -49,6 +50,7 @@ export default function ContactForm() {
 
         if (result.success) {
             setIsSuccess(true);
+            analytics.contactForm('contact-page');
             // Reset form
             (event.target as HTMLFormElement).reset();
         } else {

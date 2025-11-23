@@ -1,6 +1,9 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, LucideIcon } from 'lucide-react';
+import { analytics } from '@/lib/analytics';
 
 interface ServiceCardProps {
   title: string;
@@ -30,7 +33,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <p className="text-gray-600 mb-6 flex-grow">
         {description}
       </p>
-      <Link href={linkUrl} className="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center mt-auto">
+      <Link
+        href={linkUrl}
+        className="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center mt-auto"
+        onClick={() => analytics.serviceClick(title)}
+      >
         {linkText} <ArrowRight className="ml-1 h-4 w-4" />
       </Link>
     </div>

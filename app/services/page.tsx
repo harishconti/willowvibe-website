@@ -2,6 +2,7 @@ import { Layout, Database, Cloud, HeartPulse, Code, Brain } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
+import TrackedLink from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Our Services | Custom SaaS, AI & Data Engineering | WillowVibe",
@@ -145,9 +146,14 @@ export default function Services() {
                     </div>
                 </div>
 
-                <Link href={service.link} className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 transition-colors">
+                <TrackedLink
+                  href={service.link}
+                  eventAction="serviceClick"
+                  eventData={service.title}
+                  className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 transition-colors"
+                >
                   Get Started
-                </Link>
+                </TrackedLink>
               </div>
               <div className="flex-1 bg-gray-100 rounded-2xl h-80 w-full flex items-center justify-center relative overflow-hidden">
                  <Image
@@ -166,9 +172,14 @@ export default function Services() {
           <div className="max-w-4xl mx-auto px-4 text-center">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Not sure what you need?</h2>
               <p className="text-gray-600 mb-8">We can help assess your requirements and recommend the best solution for your budget and goals.</p>
-              <Link href="/contact" className="text-teal-700 font-semibold hover:text-teal-800 border-b-2 border-teal-700 hover:border-teal-800 pb-1">
+              <TrackedLink
+                href="/contact"
+                eventAction="scheduleConsultation"
+                eventData="services-bottom-cta"
+                className="text-teal-700 font-semibold hover:text-teal-800 border-b-2 border-teal-700 hover:border-teal-800 pb-1"
+              >
                   Book a Free Consultation Strategy Call
-              </Link>
+              </TrackedLink>
           </div>
       </section>
     </div>

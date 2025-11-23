@@ -1,6 +1,7 @@
 import { ArrowRight, Check, Server, Smartphone, Database } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
+import TrackPageView from "@/components/TrackPageView";
 
 export const metadata: Metadata = {
   title: "Case Studies & Portfolio | WillowVibe",
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function Work() {
   return (
     <div className="bg-white">
+      <TrackPageView event="viewCaseStudy" data="Clinic OS" />
       {/* Header */}
       <div className="bg-teal-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

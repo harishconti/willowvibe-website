@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { X, MessageCircle } from 'lucide-react'
+import { analytics } from '@/lib/analytics'
 
 declare global {
   interface Window {
@@ -43,6 +44,7 @@ export default function ChatWidget() {
     if (typeof window !== 'undefined' && window.Tawk_API && typeof window.Tawk_API.maximize === 'function') {
       window.Tawk_API.maximize()
     }
+    analytics.chatInitiated();
     setShowBadge(false)
     setTimeout(() => setShouldRender(false), 500)
   }
