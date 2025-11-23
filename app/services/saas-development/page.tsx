@@ -9,6 +9,8 @@ import {
   Server
 } from 'lucide-react';
 import { Metadata } from 'next';
+import StructuredData from '@/components/StructuredData';
+import { generateServiceSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: "SaaS Development Services | Custom B2B Platforms",
@@ -16,7 +18,23 @@ export const metadata: Metadata = {
 };
 
 export default function SaaSDevelopmentPage() {
+  const serviceData = {
+    name: 'SaaS Development',
+    description: 'Expert SaaS development services using React, Next.js, and Python. We build scalable, multi-tenant B2B platforms and mobile-first applications.',
+    url: 'https://harishconti.github.io/willowvibe-website/services/saas-development',
+    priceRange: '$15000-$75000+',
+  };
+
+  const breadcrumbItems = [
+    { name: 'Home', url: 'https://harishconti.github.io/willowvibe-website' },
+    { name: 'Services', url: 'https://harishconti.github.io/willowvibe-website/services' },
+    { name: 'SaaS Development', url: 'https://harishconti.github.io/willowvibe-website/services/saas-development' },
+  ];
+
   return (
+    <>
+    <StructuredData data={generateServiceSchema(serviceData)} />
+    <StructuredData data={generateBreadcrumbSchema(breadcrumbItems)} />
     <ServicePageLayout
       serviceName="SaaS Development"
       heroDescription="Scalable, secure, and user-centric B2B platforms built for growth. Transform your idea into a market-leading product."
@@ -175,5 +193,6 @@ export default function SaaSDevelopmentPage() {
         }
       ]}
     />
+    </>
   );
 }

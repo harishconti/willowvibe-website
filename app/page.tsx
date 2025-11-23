@@ -8,6 +8,8 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
 import TrackedLink from "@/components/TrackedLink";
+import StructuredData from '@/components/StructuredData';
+import { generateOrganizationSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: "WillowVibe Digital Solutions | Custom SaaS Development & AI Integration",
@@ -20,6 +22,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+      <StructuredData data={generateOrganizationSchema()} />
       <ExitIntentPopup />
 
       {/* Promotional Banner */}
