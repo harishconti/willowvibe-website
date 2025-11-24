@@ -80,7 +80,7 @@ export default function Header() {
       {/* Mobile menu */}
       {isOpen && (
         <div className="xl:hidden" id="mobile-menu">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900 shadow-lg border-t border-gray-100 dark:border-gray-800">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900 shadow-lg border-t border-gray-100 dark:border-gray-800 max-h-[calc(100vh-4rem)] overflow-y-auto">
             {navLinks.map((link) => (
               <Link
                 key={link.name}

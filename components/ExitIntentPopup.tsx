@@ -56,7 +56,7 @@ export default function ExitIntentPopup() {
             <div className="bg-teal-900 text-white p-8 md:w-2/5 flex flex-col justify-center items-center text-center">
                 <FileText className="w-16 h-16 mb-4 text-teal-300" />
                 <div className="text-sm font-semibold uppercase tracking-wider text-teal-300 mb-2">Free Guide</div>
-                <h3 className="text-2xl font-bold leading-tight">Wait! Don't leave empty-handed.</h3>
+                <h3 className="text-2xl font-bold leading-tight">Wait! Don&apos;t leave empty-handed.</h3>
             </div>
 
             <div className="p-8 md:w-3/5">
@@ -81,7 +81,7 @@ export default function ExitIntentPopup() {
                     onClick={handleDismiss}
                     className="w-full mt-3 text-xs text-gray-400 hover:text-gray-600 text-center"
                 >
-                    No thanks, I don't need this guide
+                    No thanks, I don&apos;t need this guide
                 </button>
             </div>
         </div>

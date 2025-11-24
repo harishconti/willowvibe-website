@@ -18,7 +18,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Get in Touch</h1>
           <p className="text-xl text-teal-100 max-w-2xl mx-auto">
-            Ready to start your project? We'd love to hear from you.
+            Ready to start your project? We&apos;d love to hear from you.
           </p>
         </div>
       </div>
@@ -65,7 +65,7 @@ export default function Contact() {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-                    <p className="mt-1 text-gray-600">+91 [Your Number]</p>
+                    <p className="mt-1 text-gray-600">+91 98765 43210</p>
                   </div>
                 </div>
 

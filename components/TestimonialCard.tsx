@@ -25,7 +25,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       </div>
       <div className="relative z-10 flex-grow">
         <p className="text-lg text-gray-600 italic mb-6 pt-6">
-          "{quote}"
+          &quot;{quote}&quot;
         </p>
       </div>
       <div className="flex items-center mt-auto">

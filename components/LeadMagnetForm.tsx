@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Check, Loader2, Download, AlertCircle } from "lucide-react";
 import { analytics } from "@/lib/analytics";
+import { BASE_PATH } from "@/lib/constants";
 
 export default function LeadMagnetForm() {
   const [formData, setFormData] = useState({
@@ -48,7 +49,7 @@ export default function LeadMagnetForm() {
       // Trigger download
       const link = document.createElement('a');
       // Using the specific basePath as configured in next.config.js
-      link.href = '/willowvibe-website/resources/saas-development-guide-2025.pdf';
+      link.href = `${BASE_PATH}/resources/saas-development-guide-2025.pdf`;
       link.download = 'WillowVibe-SaaS-Guide-2025.pdf';
       document.body.appendChild(link);
       link.click();
@@ -69,7 +70,7 @@ export default function LeadMagnetForm() {
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2">Check your inbox!</h3>
         <p className="text-gray-600 mb-6">
-          We've sent the guide to <strong>{formData.email}</strong>. The download should have started automatically.
+          We&apos;ve sent the guide to <strong>{formData.email}</strong>. The download should have started automatically.
         </p>
         <button
           onClick={() => setStatus("idle")}

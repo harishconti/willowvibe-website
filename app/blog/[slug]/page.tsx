@@ -172,7 +172,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                  <div className="mt-16 pt-8 border-t border-gray-100">
                      <h3 className="text-xl font-bold text-gray-900 mb-4">Need help implementing this?</h3>
                      <p className="text-gray-600 mb-6">
-                         We specialize in building custom solutions like the one described above. Let's discuss your project.
+                         We specialize in building custom solutions like the one described above. Let&apos;s discuss your project.
                      </p>
                      <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 transition-colors">
                         Contact Us

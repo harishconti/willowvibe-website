@@ -25,7 +25,7 @@ const Testimonials = () => {
               </div>
 
               <p className="text-gray-600 mb-6 flex-grow italic relative z-10">
-                "{testimonial.quote}"
+                &quot;{testimonial.quote}&quot;
               </p>
 
               <div className="flex items-center mb-4">

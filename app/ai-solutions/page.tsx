@@ -123,7 +123,7 @@ export default function AISolutions() {
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">Retrieval-Augmented Generation (RAG) Systems</h3>
                     <p className="text-gray-600 mb-6 text-lg">
-                      Connect LLMs to your private data sources to create intelligent Q&A systems that answer questions based on your company's knowledge base.
+                      Connect LLMs to your private data sources to create intelligent Q&A systems that answer questions based on your company&apos;s knowledge base.
                     </p>
 
                     <div className="grid md:grid-cols-2 gap-8 mb-8">

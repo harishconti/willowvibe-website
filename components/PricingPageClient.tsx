@@ -394,12 +394,12 @@ export default function PricingPageClient() {
           answer: "Yes, upgrades are always possible. We'll adjust the deliverables and pricing accordingly."
         },
         {
-          question: "What's not included in these prices?",
+          question: "What&apos;s not included in these prices?",
           answer: "Third-party costs (like AWS hosting, OpenAI API credits, paid plugins) are not included and are billed directly to you."
         },
         {
           question: "Do you offer discounts for startups?",
-          answer: "We love working with startups! While we don't have a standard discount, we often can structure the payment plan to help with cash flow or adjust the scope for a tighter MVP."
+          answer: "We love working with startups! While we don&apos;t have a standard discount, we often can structure the payment plan to help with cash flow or adjust the scope for a tighter MVP."
         },
         {
           question: "What payment methods do you accept?",
@@ -419,7 +419,7 @@ export default function PricingPageClient() {
       <section className="py-20 bg-gray-50 text-center">
          <div className="max-w-3xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Not sure which package fits?</h2>
-            <p className="text-xl text-gray-600 mb-8">Schedule a free consultation and we'll help you choose the best path for your business.</p>
+            <p className="text-xl text-gray-600 mb-8">Schedule a free consultation and we&apos;ll help you choose the best path for your business.</p>
             <TrackedLink
                href="/contact"
                eventAction="scheduleConsultation"

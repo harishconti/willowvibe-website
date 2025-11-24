@@ -1,9 +1,11 @@
+import { SITE_URL } from '@/lib/constants';
+
 export const generateOrganizationSchema = () => ({
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'WillowVibe Digital Solutions',
-  url: 'https://harishconti.github.io/willowvibe-website',
-  logo: 'https://harishconti.github.io/willowvibe-website/images/logo.png',
+  url: SITE_URL,
+  logo: `${SITE_URL}/images/logo.png`,
   description: 'Full-stack development, AI integration, data engineering, and cloud infrastructure for modern businesses.',
   address: {
     '@type': 'PostalAddress',
@@ -64,7 +66,7 @@ export const generateArticleSchema = (article: {
     name: 'WillowVibe Digital Solutions',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://harishconti.github.io/willowvibe-website/images/logo.png',
+      url: `${SITE_URL}/images/logo.png`,
     },
   },
   image: article.image,
