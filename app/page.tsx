@@ -189,7 +189,7 @@ export default function Home() {
                 Why Partner with WillowVibe?
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                We don't just write code; we build solutions that solve real business problems. Our expertise spans the entire development lifecycle.
+                We don&apos;t just write code; we build solutions that solve real business problems. Our expertise spans the entire development lifecycle.
               </p>
 
               <div className="space-y-6">
@@ -333,7 +333,7 @@ export default function Home() {
             Ready to Build Your Next Digital Solution?
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
-            Let's discuss how we can help you transform your business with cutting-edge technology.
+            Let&apos;s discuss how we can help you transform your business with cutting-edge technology.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
              <TrackedLink

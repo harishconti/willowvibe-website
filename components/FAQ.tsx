@@ -70,7 +70,7 @@ export default function FAQ({ items }: FAQProps) {
             Still have questions?
           </h3>
           <p className="text-gray-600 mb-6">
-            Can't find the answer you're looking for? Please chat to our friendly team.
+            Can&apos;t find the answer you&apos;re looking for? Please chat to our friendly team.
           </p>
           <Link
             href="/contact"

@@ -63,9 +63,9 @@ export default function SaaSGuidePage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">What You'll Learn Inside</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">What You&apos;ll Learn Inside</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We've condensed years of SaaS development experience into this comprehensive guide. No fluff, just actionable technical and business advice.
+              We&apos;ve condensed years of SaaS development experience into this comprehensive guide. No fluff, just actionable technical and business advice.
             </p>
           </div>
 
@@ -163,7 +163,7 @@ export default function SaaSGuidePage() {
                              <div>
                                  <h4 className="font-semibold text-blue-900">Why this guide?</h4>
                                  <p className="text-blue-800 text-sm mt-1">
-                                     Most tutorials stop at "Hello World". This guide covers the hard parts: tenancy isolation, scaling databases, and enterprise-grade security.
+                                     Most tutorials stop at &quot;Hello World&quot;. This guide covers the hard parts: tenancy isolation, scaling databases, and enterprise-grade security.
                                  </p>
                              </div>
                         </div>

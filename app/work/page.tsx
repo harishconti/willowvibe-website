@@ -43,7 +43,7 @@ export default function Work() {
 
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">The Solution</h3>
                 <p className="mb-6">
-                  We built a full-stack patient management system using a "Local-First" architecture. The application prioritizes local data storage for instant interactions and synchronizes with the cloud in the background.
+                  We built a full-stack patient management system using a &quot;Local-First&quot; architecture. The application prioritizes local data storage for instant interactions and synchronizes with the cloud in the background.
                 </p>
 
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Key Features</h3>

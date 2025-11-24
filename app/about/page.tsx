@@ -63,7 +63,7 @@ export default function About() {
                 Founded in 2024 by three technology experts, WillowVibe brings together over 15 years of combined experience in software engineering, cloud architecture, and industrial solutions. Based in Bengaluru, India, we bridge the gap between complex enterprise technology and practical business needs.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Our mission is simple yet ambitious: to make robust, scalable technology accessible to businesses of all sizes. Whether you're a startup needing a rapid MVP or an established enterprise seeking digital transformation, we apply the same rigorous engineering standards to every project.
+                Our mission is simple yet ambitious: to make robust, scalable technology accessible to businesses of all sizes. Whether you&apos;re a startup needing a rapid MVP or an established enterprise seeking digital transformation, we apply the same rigorous engineering standards to every project.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
                 Recognizing the transformative power of Generative AI, we have integrated cutting-edge AI and LLM capabilities into our core offerings, allowing us to deliver intelligent, future-ready solutions that drive real growth.

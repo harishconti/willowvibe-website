@@ -283,7 +283,7 @@ export default function ClinicOSCaseStudy() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Build Your Healthcare Solution?</h2>
           <p className="text-xl text-gray-600 mb-10">
-             Let's discuss how our technical expertise can transform your medical operations.
+             Let&apos;s discuss how our technical expertise can transform your medical operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal-600 rounded-lg hover:bg-teal-700 transition-all shadow-md hover:shadow-lg">
